@@ -12,6 +12,7 @@ import MathWorksModelingAward from "./pages/MathWorksModelingAward";
 import Stage2 from "./pages/Stage2";
 import Sponsorship from "./pages/Sponsorship";
 import Stage3 from "./pages/Stage3";
+import RegistrationPage from "./pages/RegistrationPage";
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path="/important-dates" element={<Important/>}/>
       <Route path="/contest-rules" element={<ContestRulesPage/>}/>
       <Route path="/game-videos" element={<GameVideoPage/>}/>
+      <Route path="/registration" element={<RegistrationPage/>}/>
       <Route path="/contact" element={<ContactUsPage/>}/>
       <Route path="/stage1" element={<Stage1/>}/>
       <Route path="/mathworks" element={<MathWorksModelingAward/>}/>

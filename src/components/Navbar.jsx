@@ -75,14 +75,12 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4 flex-1 justify-end min-w-0">
           <ul className="flex flex-wrap space-x-2 md:space-x-4 text-gray-900 items-center">
             <li><Link to="/" className="nav">Home</Link></li>
-            
             <li><Link to="/contest-rules" className="nav">Contest Rules</Link></li>
             <li><Link to="/game-videos" className="nav">Game Videos</Link></li>
+            <li><Link to="/registration" className="nav">Registration</Link></li>
             {/* <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             <li><Link to="/stage2" className="nav">Stage-2</Link></li>
             <li><Link to="/final" className="nav">Final</Link></li> */}
-            
-            <li><Link to="/contact" className="nav">Contact</Link></li>
             <li className="relative">
               <span
                 className="nav cursor-pointer select-none"
@@ -103,11 +101,12 @@ const Navbar = () => {
                 <li>
                   <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100">Sponsorship</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100">MathWorks</Link>
-                </li>
+                </li> */}
               </ul>
             </li>
+               <li><Link to="/contact" className="nav">Contact</Link></li>
           </ul>
           <div className="flex space-x-2 md:space-x-4 ml-2 md:ml-4">
             <a href="https://youtube.com/@ddnationalrobocon2441?si=v63ugCnYiJLEG3dK" target="_blank" rel="noopener noreferrer">
@@ -139,6 +138,9 @@ const Navbar = () => {
             <li>
               <Link to="/game-videos" className="nav" onClick={closeMobileMenu}>Game Videos</Link>
             </li>
+            <li>
+              <Link to="/registration" className="nav" onClick={closeMobileMenu}>Registration</Link>
+            </li>
             {/* <li>
               <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
             </li>
@@ -149,9 +151,7 @@ const Navbar = () => {
               <Link to="/final" className="nav" onClick={closeMobileMenu}>Final</Link>
             </li>
            */}
-            <li>
-              <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
-            </li>
+           
             <li>
               <span
                 className="nav cursor-pointer select-none flex items-center justify-center"
@@ -168,9 +168,12 @@ const Navbar = () => {
                   <li>
                     <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>Sponsorship</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks</Link>
-                  </li>
+                  </li> */}
+                   <li>
+              <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
+            </li>
                 </ul>
               )}
             </li>

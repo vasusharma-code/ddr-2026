@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
 
       {/* Video Link Section */}
-      <div className="md:mr-12 bg-blue-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto">
+      {/* <div className="md:mr-12 bg-blue-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto">
         <a
           href="/"
           className="text-lg font-bold cursor-pointer hover:underline flex items-center justify-center space-x-2"
@@ -118,7 +118,7 @@ const Hero = () => {
           </svg>
           <span>🎥 Watch ABU Robocon 2025 Wrap-Up</span>
         </a>
-      </div>
+      </div> */}
 
       {/* New Alert Box for Stage-2 Guidelines */}
       <a href="/">
@@ -160,7 +160,12 @@ const Hero = () => {
                 {/* Each Date */}
                 { [
                   {
-                    newDate: "31-Dec-2026",
+                    newDate: "7-31 Dec-2025",
+                    displayDate: "7-31",
+                    description: "Pre-Registration",
+                  },
+                  {
+                    newDate: "31-Jan-2026",
                     displayDate: "31",
                     description: "Submission of Concept note and idea solution",
                   },
@@ -203,7 +208,7 @@ const Hero = () => {
                     {/* Date & Description */}
                     <div>
                       {event.newDate ? (
-                        <span className="text-red-500 font-bold block">
+                        <span className={`font-bold block ${event.description === "Pre-Registration" ? "text-blue-600" : "text-red-500"}`}>
                           {event.newDate}
                         </span>
                       ) : (
@@ -217,6 +222,10 @@ const Hero = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              {/* Add mandatory pre-registration note */}
+              <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold">
+                Pre-registration is mandatory before the submission of the concept note. Without completing the pre-registration, Stage-1 concept notes will not be considered for Stage-1 evaluation.
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ import nicolalogo from '../assets/NICOLA LOGO BLUE png.png';
 
 const Sponsorship = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 py-10 px-4 md:px-0 m-2 mt-14">
-    <h1 className="text-4xl font-extrabold text-blue-700 mb-8 text-center tracking-tight">DD Robocon 2025 Sponsorship</h1>
+    <h1 className="text-4xl font-extrabold text-blue-700 mb-8 text-center tracking-tight">DD Robocon 2026 Sponsorship</h1>
     
     {/* About Knowledge Partners */}
     <section className="mb-10">
@@ -72,20 +72,29 @@ const Sponsorship = () => (
     
     {/* Welcome Section */}
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-green-700 mb-3 uppercase tracking-wide">Welcome to DD-Robocon 2025</h2>
+      <h2 className="text-2xl font-bold text-green-700 mb-3 uppercase tracking-wide">WELCOME TO DD-ROBOCON 2026</h2>
       <p className="text-gray-700 mb-2 font-semibold">Pioneering Innovation in Robotics and Engineering</p>
-      <p className="text-gray-700 mb-2">DD-Robocon (Doordarshan Robocon) is India's premier robotics competition that brings together the brightest minds from across the nation to design, innovate, and compete in a thrilling display of engineering prowess. This year's theme, "Robot Basketball," challenges participants to develop robots capable of dribbling, shooting, and scoring goals in a high-energy game environment.</p>
+      <p className="text-gray-700 mb-2">
+        DD-Robocon 2026 (The National Robotics Championship) is India’s premier robotics competition, bringing together the brightest minds from across the nation to design, innovate, and compete in a thrilling showcase of engineering excellence.
+      </p>
+      <p className="text-gray-700 mb-2">
+        This year’s theme, “Kung Fu Quest,” symbolizes the journey of a martial-arts disciple striving toward mastery through discipline, strategy, teamwork, and harmony. It fuses traditional Chinese martial arts culture with advanced robotics—inviting teams to explore not only mechanical and electronic design, but also intelligent coordination, adaptability, and strategic execution.
+      </p>
     </section>
     
     {/* Event Details */}
     <section className="mb-10">
-      <h3 className="text-xl font-bold text-blue-600 mb-2 uppercase tracking-wide">Event Details</h3>
+      <h3 className="text-xl font-bold text-blue-600 mb-2 uppercase tracking-wide">EVENT DETAILS</h3>
       <ul className="list-disc ml-6 text-gray-700 mb-2 font-medium">
-        <li>National Finals: 12-13 July 2025</li>
+        <li>National Finals: 2nd–5th July 2026</li>
         <li>Venue: IIT Delhi, New Delhi</li>
       </ul>
-      <p className="text-gray-700 mb-2">Indian Institute of Technology Delhi (IITD) and Automation Industry Association (AIA) partnered in May 2017 to establish a center under the auspices of the Samarth Udyog initiative—a project of the Ministry of Heavy Industries (MHI). The center, known as the Foundation for Smart Manufacturing (FSM), supports the development of technologies for the effective adoption and implementation of smart manufacturing concepts.</p>
-      <p className="text-gray-700 mb-2">The winning team will represent India at the prestigious international competition ABU Robocon 2025 in Mongolia, scheduled for August 24, 2025, bringing global recognition to their innovative designs.</p>
+      <p className="text-gray-700 mb-2">
+        Indian Institute of Technology Delhi (IITD) and the Automation Industry Association (AIA) partnered in May 2017 to establish a center under the Samarth Udyog initiative, a project of the Ministry of Heavy Industries (MHI). The center, known as the Foundation for Smart Manufacturing (FSM), supports the development and adoption of smart manufacturing concepts and advanced technologies in industry.
+      </p>
+      <p className="text-gray-700 mb-2">
+        The winning team will represent India at the prestigious international competition ABU Robocon 2026, to be held in Hong Kong on 23 August 2026, bringing global recognition to their innovative engineering and design.
+      </p>
       <h4 className="text-lg font-bold text-blue-600 mt-4 mb-2 uppercase tracking-wide">Event Reach</h4>
       <ul className="list-disc ml-6 text-gray-700 font-medium">
         <li>Colleges Participating: 75+ top institutions from India.</li>
@@ -96,7 +105,7 @@ const Sponsorship = () => (
     
     {/* Why Sponsor */}
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-yellow-600 mb-3 uppercase tracking-wide">Why Sponsor DD-Robocon 2025?</h2>
+      <h2 className="text-2xl font-bold text-yellow-600 mb-3 uppercase tracking-wide">Why Sponsor DD-Robocon 2026?</h2>
       <ul className="list-disc ml-6 text-gray-700 mb-2 font-medium">
         <li>Unparalleled Brand Visibility: Reach a diverse audience, including leading academic institutions, professors, researchers, students, industry experts, and media outlets.</li>
         <li>Foster Innovation: Be part of a transformative event that inspires the next generation of engineers and roboticists.</li>
@@ -107,7 +116,7 @@ const Sponsorship = () => (
     
     {/* Sponsorship Matrix */}
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">Sponsorship Matrix 2025</h2>
+      <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">Sponsorship Matrix 2026</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full border border-gray-300 text-sm rounded-lg overflow-hidden">
           <thead className="bg-gray-100">
@@ -145,10 +154,10 @@ const Sponsorship = () => (
     </section>
     
     {/* Sponsors Section */}
-    <section className="mb-10">
+    {/* <section className="mb-10">
       <h2 className="text-2xl font-bold text-green-600 mb-6 uppercase tracking-wide">DD-Robocon 2025 Sponsors</h2>
       
-      {/* Gold Sponsors */}
+     
       <div className="mb-8">
         <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Gold Sponsors</h3>
         <div className="flex flex-wrap justify-center gap-8 items-center">
@@ -171,7 +180,7 @@ const Sponsorship = () => (
         </div>
       </div>
       
-      {/* Bronze Sponsors */}
+      
       <div className="mb-8">
         <h3 className="text-xl font-bold text-amber-700 mb-4 text-center">Bronze Sponsors</h3>
         <div className="flex flex-wrap justify-center gap-6 items-center">
@@ -194,15 +203,15 @@ const Sponsorship = () => (
         </div>
       </div>
       
-      {/* Stall Sponsors */}
+      
       <div className="mb-8">
-        {/* <h3 className="text-xl font-bold text-gray-600 mb-4 text-center">Stall Sponsors</h3> */}
+       
         <div className="flex flex-wrap justify-center gap-6 items-center">
           
         </div>
       </div>
       
-      {/* Other Sponsors */}
+      
       <div className="mb-8">
         <h3 className="text-xl font-bold text-blue-600 mb-4 text-center">Other Sponsors</h3>
         <div className="flex flex-wrap justify-center gap-4 items-center">
@@ -233,7 +242,7 @@ const Sponsorship = () => (
         </div>
       </div>
       
-      {/* Knowledge Partners */}
+      
       <div>
         <h3 className="text-xl font-bold text-purple-600 mb-4 text-center">Knowledge Partners</h3>
         <div className="flex flex-wrap justify-center gap-6 items-center">
@@ -256,7 +265,7 @@ const Sponsorship = () => (
         </div>
       </div>
 
-      {/* Small Sponsors */}
+      
       <div className="mt-8">
         <h3 className="text-xl font-bold text-gray-700 mb-4 text-center">Small Sponsors</h3>
         <div className="flex flex-wrap justify-center gap-6 items-center">
@@ -318,7 +327,7 @@ const Sponsorship = () => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
     
     {/* Contact Us */}
     <section>
@@ -327,7 +336,7 @@ const Sponsorship = () => (
         <p>Email: <a href="mailto:ddroboconiitd@gmail.com" className="text-blue-600 underline font-semibold">ddroboconiitd@gmail.com</a></p>
         <p>Phone: 9811512965, 8116435875, 9013899145</p>
         <p>Website: <a href="https://ddrobocon.iitd.ac.in" className="text-blue-600 underline font-semibold">ddrobocon.iitd.ac.in</a></p>
-        <p>DD Robocon 2025 Secretariat</p>
+        <p>DD Robocon 2026 Secretariat</p>
         <p>Department of Mechanical Engineering, IIT Delhi, Hauz Khas, New Delhi - 110016, India</p>
       </div>
     </section>

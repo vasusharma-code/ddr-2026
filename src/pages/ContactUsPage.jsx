@@ -12,7 +12,7 @@ const ContactUsPage = () => {
       <div className="mt-8 bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
         <h2 className="text-lg font-semibold text-gray-700 mb-4"></h2>
         <div className="text-gray-600 space-y-2">
-          <p>DD Robocon 2025 Secretariat</p>
+          <p>DD Robocon 2026 Secretariat</p>
           <p>Department of Mechanical Engineering,</p>
           <p>Indian Institute of Technology Delhi</p>
           <p>Hauz Khas, New Delhi - 110016</p>
