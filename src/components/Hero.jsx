@@ -78,24 +78,24 @@ const Hero = () => {
               Introducing DD Robocon India 2026
             </h1>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-              DD Robocon India 2026, powered by IIT Delhi, is the national stage
-              of the prestigious Asian-Oceanian college robot competition. This
-              thrilling event challenges robots to complete complex tasks
+              DD Robocon India 2026, organized by IIT Delhi, Prasar Bharati, and
+              STPI, is the national stage of the prestigious ABU Robocon 2026.
+              This thrilling event challenges robots to complete complex tasks
               against the clock while fostering lasting bonds among visionary
               young minds. Join us as we propel engineering and broadcasting
-              technologies to new heights. Welcome to the future of innovation!
+              technologies to new heights. Welcome to the future of innovation!
             </p>
           </div>
         </div>
       </div>
 
       {/* Video Link Section */}
-      {/* <div className="md:mr-12 bg-blue-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto">
+      <div className="md:mr-12 bg-blue-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto">
         <a
-          href="/"
+          href="https://drive.google.com/file/d/10RstFP8w52A50hK2Y8PvSjbJ_71ASYDe/view?usp=sharing"
           className="text-lg font-bold cursor-pointer hover:underline flex items-center justify-center space-x-2"
-          // target="_blank"
-          // rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,12 +116,15 @@ const Hero = () => {
               d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"
             />
           </svg>
-          <span>🎥 Watch ABU Robocon 2025 Wrap-Up</span>
+          <span>🎥 Watch DD ROBOCON Promo Video</span>
         </a>
-      </div> */}
+      </div>
 
       {/* New Alert Box for Stage-2 Guidelines */}
-      <a href="/">
+      <a href="https://drive.google.com/file/d/1200IWB_iwe2yZF9JuzzGdkh4lIEssx7v/view?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
+      >
         <div className="md:mr-12 bg-green-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto cursor-pointer">
           <span className="text-lg font-bold">📢 Register!</span>
         </div>
@@ -143,14 +146,14 @@ const Hero = () => {
             {/* Important Dates Section */}
             <div className="w-full md:w-2/3">
               {/* Alert Box for Guidelines */}
-              {/* <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
+              <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2q3E9t3NCC-__WfCOaQ41vvGCNv-MRrp-nqz9Q5pcYpeblg/viewform?usp=sharing&ouid=104266911694900133464" className="text-lg font-bold cursor-pointer hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  📢 DD-Robocon 2025 Non-Competitive Presentations
+                  📢 Watch DD ROBOCON Promo Video(Hindi)
                 </a>
-              </div> */}
+              </div>
 
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
                 Important Dates
@@ -158,16 +161,16 @@ const Hero = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Each Date */}
-                { [
+                {[
                   {
-                    newDate: "7-31 Dec-2025",
-                    displayDate: "7-31",
-                    description: "Pre-Registration",
+                    newDate: "Till-31 Dec-2025",
+                    displayDate: "31",
+                    description: "Pre-registration form: DD-Robocon 2026",
                   },
                   {
                     newDate: "31-Jan-2026",
                     displayDate: "31",
-                    description: "Submission of Concept note and idea solution",
+                    description: "Submission of Stage 1 (concept note and idea solution)",
                   },
                   {
                     newDate: "28-Feb-2026",
@@ -177,7 +180,7 @@ const Hero = () => {
                   {
                     newDate: "15-May-2026",
                     displayDate: "15",
-                    description: "Deadline for video submission",
+                    description: "Deadline for Stage 2 (video submission)",
                   },
                   {
                     newDate: "31-May-2026",
@@ -193,30 +196,35 @@ const Hero = () => {
                 ].map((event, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-4 p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                    className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
                   >
                     {/* Date Circle */}
                     <div
-                      className="w-14 h-14 flex items-center justify-center rounded-full text-white text-lg font-bold"
-                      style={{
-                        background: "#22C55E",
-                      }}
+                      className="flex flex-col items-center justify-center"
+                      style={{ minWidth: "56px" }}
                     >
-                      {event.displayDate}
+                      <div
+                        className="w-14 h-14 flex items-center justify-center rounded-full font-extrabold text-white text-2xl shadow"
+                        style={{
+                          background: "#22C55E",
+                          boxShadow: "0 2px 8px 0 rgba(34,197,94,0.15)",
+                        }}
+                      >
+                        {event.displayDate}
+                      </div>
                     </div>
-
                     {/* Date & Description */}
                     <div>
                       {event.newDate ? (
-                        <span className={`font-bold block ${event.description === "Pre-Registration" ? "text-blue-600" : "text-red-500"}`}>
+                        <span className="font-bold block text-[#EF4444] text-base md:text-lg mb-1">
                           {event.newDate}
                         </span>
                       ) : (
-                        <span className="text-lg font-semibold text-gray-800 block">
+                        <span className="text-lg font-semibold text-gray-800 block mb-1">
                           {event.date}
                         </span>
                       )}
-                      <p className="text-sm text-gray-600">
+                      <p className="text-sm text-gray-600 font-medium">
                         {event.description}
                       </p>
                     </div>
@@ -225,7 +233,9 @@ const Hero = () => {
               </div>
               {/* Add mandatory pre-registration note */}
               <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold">
-                Pre-registration is mandatory before the submission of the concept note. Without completing the pre-registration, Stage-1 concept notes will not be considered for Stage-1 evaluation.
+                Pre-registration is mandatory before the submission of the
+                concept note. Without completing the pre-registration, Stage-1
+                concept notes will not be considered for Stage-1 evaluation.
               </div>
             </div>
           </div>

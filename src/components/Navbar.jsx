@@ -62,7 +62,7 @@ const Navbar = () => {
             <img src={logo2} alt="Logo2" className="h-10 md:h-12 ml-2 md:ml-3 mb-2 md:mb-4" />
           </h1>
         </div>
-        <div className="flex items-center md:hidden">
+        <div className="flex items-center lg:hidden">
           <button onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? (
               <RiCloseLine className="w-6 h-6" />
@@ -72,8 +72,8 @@ const Navbar = () => {
           </button>
         </div>
         {/* Desktop Navigation and Social Icons */}
-        <div className="hidden md:flex items-center space-x-4 flex-1 justify-end min-w-0">
-          <ul className="flex flex-wrap space-x-2 md:space-x-4 text-gray-900 items-center">
+        <div className="hidden lg:flex items-center space-x-4 flex-1 justify-end min-w-0">
+          <ul className="flex flex-wrap space-x-2 lg:space-x-4 text-gray-900 items-center">
             <li><Link to="/" className="nav">Home</Link></li>
             <li><Link to="/contest-rules" className="nav">Contest Rules</Link></li>
             <li><Link to="/game-videos" className="nav">Game Videos</Link></li>
@@ -106,9 +106,19 @@ const Navbar = () => {
                 </li> */}
               </ul>
             </li>
-               <li><Link to="/contact" className="nav">Contact</Link></li>
+            <li><Link to="/contact" className="nav">Contact</Link></li>
+            <li>
+              <a 
+                href="https://ddrobocon2025.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="nav"
+              >
+                DD-Robocon 2025
+              </a>
+            </li>
           </ul>
-          <div className="flex space-x-2 md:space-x-4 ml-2 md:ml-4">
+          <div className="flex space-x-2 lg:space-x-4 ml-2 lg:ml-4">
             <a href="https://youtube.com/@ddnationalrobocon2441?si=v63ugCnYiJLEG3dK" target="_blank" rel="noopener noreferrer">
               <FaYoutube className="w-6 h-6" />
             </a>
@@ -171,11 +181,22 @@ const Navbar = () => {
                   {/* <li>
                     <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks</Link>
                   </li> */}
-                   <li>
-              <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
-            </li>
                 </ul>
               )}
+            </li>
+            <li>
+              <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
+            </li>
+            <li>
+              <a 
+                href="https://ddrobocon2025.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="nav"
+                onClick={closeMobileMenu}
+              >
+                DD-Robocon 2025
+              </a>
             </li>
           </ul>
           <div className="flex space-x-4 mt-4">

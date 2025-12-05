@@ -16,7 +16,7 @@ const RegistrationPage = () => {
         </div>
         <div className="mb-6 text-center">
           <span className="text-xl font-bold text-blue-600">Date</span>
-          <div className="text-lg font-medium mt-2">7th December 2025 to 31st December 2025</div>
+          <div className="text-lg font-medium mt-2">Till 31st December 2025</div>
         </div>
         <div className="mb-6">
           <h3 className="text-lg font-bold text-gray-700 mb-2 text-center">Account Details</h3>
@@ -27,6 +27,10 @@ const RegistrationPage = () => {
             <div className="mb-2"><span className="font-semibold">IFSC Code:</span> HDFC0000032</div>
             <div className="mb-2"><span className="font-semibold">Branch:</span> SDA, New Delhi</div>
           </div>
+        </div>
+        {/* Mandatory pre-registration note */}
+        <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold text-center">
+          Pre-registration is mandatory before the submission of the concept note. Without completing the pre-registration, Stage-1 concept notes will not be considered for Stage-1 evaluation.
         </div>
       </section>
     </div>
