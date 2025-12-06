@@ -126,7 +126,7 @@ const Hero = () => {
       rel="noopener noreferrer"
       >
         <div className="md:mr-12 bg-green-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl max-w-lg mx-auto cursor-pointer">
-          <span className="text-lg font-bold">📢 Register!</span>
+          <span className="text-lg font-bold">🎥 Watch DD ROBOCON Promo Video(Hindi)</span>
         </div>
       </a>
 
@@ -151,7 +151,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  📢 Watch DD ROBOCON Promo Video(Hindi)
+                 📢 Register!
                 </a>
               </div>
 
