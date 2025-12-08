@@ -147,7 +147,7 @@ const Hero = () => {
             <div className="w-full md:w-2/3">
               {/* Alert Box for Guidelines */}
               <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2q3E9t3NCC-__WfCOaQ41vvGCNv-MRrp-nqz9Q5pcYpeblg/viewform?usp=sharing&ouid=104266911694900133464" className="text-lg font-bold cursor-pointer hover:underline"
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScAmtcvwztv9Lcv_iVmPfFjlNJeEsSGdxXTnYtqzx3aN2qe-w/viewform?usp=dialog" className="text-lg font-bold cursor-pointer hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
