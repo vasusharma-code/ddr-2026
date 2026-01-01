@@ -16,7 +16,11 @@ const RegistrationPage = () => {
         </div>
         <div className="mb-6 text-center">
           <span className="text-xl font-bold text-blue-600">Date</span>
-          <div className="text-lg font-medium mt-2">Till 31st December 2025</div>
+          <div className="text-lg font-medium mt-2">
+            <span className="line-through text-gray-400">Till 31st December 2025</span>
+            <br />
+            <span className="font-bold text-blue-700">Till 9th January 2026</span>
+          </div>
         </div>
         <div className="mb-6">
           <h3 className="text-lg font-bold text-gray-700 mb-2 text-center">Account Details</h3>

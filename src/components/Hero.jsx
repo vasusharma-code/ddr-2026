@@ -161,10 +161,17 @@ const Hero = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Each Date */}
-                {[
+                { [
                   {
-                    newDate: "Till-31 Dec-2025",
-                    displayDate: "31",
+                    // Show old date struck through and new date
+                    newDate: (
+                      <>
+                        <span className="line-through text-gray-400">Till-31 Dec-2025</span>
+                        <br />
+                        <span className="font-bold text-[#EF4444]">Till-9 Jan-2026</span>
+                      </>
+                    ),
+                    displayDate: "9",
                     description: "Pre-registration form: DD-Robocon 2026",
                   },
                   {
