@@ -151,7 +151,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                 📢 Register!
+                 📢Pre Register!
                 </a>
               </div>
 

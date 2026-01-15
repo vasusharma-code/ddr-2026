@@ -5,7 +5,7 @@ const RegistrationPage = () => {
     <div className="bg-gray-50 min-h-screen p-6 flex flex-col items-center mt-12">
       {/* Page Header */}
       <header className="w-full py-8 bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-md text-center rounded-lg mb-12">
-        <h1 className="text-4xl font-bold">Registration</h1>
+        <h1 className="text-4xl font-bold">Pre Registration</h1>
       </header>
 
       <section className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-md mb-8">

@@ -78,6 +78,7 @@ const Navbar = () => {
             <li><Link to="/contest-rules" className="nav">Contest Rules</Link></li>
             <li><Link to="/game-videos" className="nav">Game Videos</Link></li>
             <li><Link to="/registration" className="nav">Registration</Link></li>
+            <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             {/* <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             <li><Link to="/stage2" className="nav">Stage-2</Link></li>
             <li><Link to="/final" className="nav">Final</Link></li> */}
@@ -150,6 +151,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/registration" className="nav" onClick={closeMobileMenu}>Registration</Link>
+            </li>
+            <li>
+              <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
             </li>
             {/* <li>
               <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
