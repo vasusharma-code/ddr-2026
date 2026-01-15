@@ -168,7 +168,7 @@ const Hero = () => {
                       <>
                         <span className="line-through text-gray-400">Till-31 Dec-2025</span>
                         <br />
-                        <span className="font-bold text-[#EF4444]">Till-9 Jan-2026</span>
+                        <span className="font-bold text-[#EF4444]">Till-15 Jan-2026</span>
                       </>
                     ),
                     displayDate: "9",
