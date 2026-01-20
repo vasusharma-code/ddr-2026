@@ -238,6 +238,24 @@ const Hero = () => {
                   </div>
                 ))}
               </div>
+
+               {/* New Note for Missed Pre-registration */}
+              <div className="mb-6 bg-red-100 border-l-4 border-red-400 p-4 rounded">
+                <div className="text-gray-800 font-semibold mb-1">
+                  Have you missed pre-registration to submit proposal in Stage I?
+                </div>
+                <div className="text-gray-700 mb-2">
+                  To provide maximum opportunity to participate in DD-Robocon 2026, the organizers have kindly agreed to accept submission of Stage I with a fee of <span className="font-bold">Rs. 5,000 + 18% GST</span> per non-pre-registered team. Pre-registered teams need <span className="font-bold">NOT PAY</span> to submit Stage I proposal.
+                </div>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScXWMHv4tI9WNenQ6ulciEF-_6f_Wl1CbWlzTVf_Jd4IrIdqA/viewform?usp=sharing&ouid=104266911694900133464"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-2 px-4 py-2 bg-red-500 text-white font-bold rounded hover:bg-red-600 transition"
+                >
+                  Submission of Stage 1 (concept note and idea solution)
+                </a>
+              </div>
               {/* Add mandatory pre-registration note */}
               <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold">
                 Pre-registration is mandatory before the submission of the

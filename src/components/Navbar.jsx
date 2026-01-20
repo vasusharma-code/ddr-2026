@@ -140,9 +140,9 @@ const Navbar = () => {
         <div className="fixed inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center z-20">
           <ul className="bg-white bg-opacity-90 w-11/12 max-w-md rounded-lg shadow-lg text-center space-y-4 py-8">
             <li><Link to="/" className="nav" onClick={closeMobileMenu}>Home</Link></li>
-            <li>
+            {/* <li>
               <Link to="/important-dates" className="nav" onClick={closeMobileMenu}>Important Dates</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contest-rules" className="nav" onClick={closeMobileMenu}>Contest Rules</Link>
             </li>
