@@ -175,8 +175,15 @@ const Hero = () => {
                     description: "Pre-registration form: DD-Robocon 2026",
                   },
                   {
-                    newDate: "31-Jan-2026",
-                    displayDate: "31",
+                    // Show old date struck through and new date
+                    newDate: (
+                      <>
+                        <span className="line-through text-gray-400">Till-31 Jan-2026</span>
+                        <br />
+                        <span className="font-bold text-[#EF4444]">Till-8 Feb-2026</span>
+                      </>
+                    ),
+                    displayDate: "8",
                     description: "Submission of Stage 1 (concept note and idea solution)",
                   },
                   {
