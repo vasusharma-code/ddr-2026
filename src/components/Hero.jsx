@@ -264,11 +264,11 @@ const Hero = () => {
                 </a>
               </div>
               {/* Add mandatory pre-registration note */}
-              <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold">
+              {/* <div className="mt-8 text-gray-700 text-base md:text-lg font-semibold">
                 Pre-registration is mandatory before the submission of the
                 concept note. Without completing the pre-registration, Stage-1
                 concept notes will not be considered for Stage-1 evaluation.
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
