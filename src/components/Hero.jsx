@@ -6,6 +6,7 @@ import stattic from "../assets/Static.png";
 import image1 from "../assets/Image1.jpg";
 import image2 from "../assets/Image 2.jpg";
 import image3 from "../assets/Image 3.jpg";
+import poster from "../assets/Poster.jpeg";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -180,10 +181,10 @@ const Hero = () => {
                       <>
                         <span className="line-through text-gray-400">Till-31 Jan-2026</span>
                         <br />
-                        <span className="font-bold text-[#EF4444]">Till-8 Feb-2026</span>
+                        <span className="font-bold text-[#EF4444]">Till-18 Feb-2026</span>
                       </>
                     ),
-                    displayDate: "8",
+                    displayDate: "18",
                     description: "Submission of Stage 1 (concept note and idea solution)",
                   },
                   {
@@ -277,21 +278,33 @@ const Hero = () => {
       {/* Technical Doubts Section */}
       <div className="bg-blue-50 py-10">
         <div className="container mx-auto px-4">
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-               Technical Doubts?
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
-              Teams are encouraged to ask technical doubts regarding the rulebook and theme on the international ABU Robocon's FAQ section.
-            </p>
-            <a
-              href="https://app7.rthk.hk/special/aburobocon2026/faq.php"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 transition-transform hover:scale-105"
-            >
-              Visit International Robocon FAQ
-            </a>
+          <div className="flex flex-col md:flex-row items-center md:space-x-8 gap-8">
+            {/* Text Content */}
+            <div className="flex-1 bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                 Technical Doubts?
+              </h2>
+              <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+                Teams are encouraged to ask technical doubts regarding the rulebook and theme on the international ABU Robocon's FAQ section.
+              </p>
+              <a
+                href="https://app7.rthk.hk/special/aburobocon2026/faq.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 transition-transform hover:scale-105"
+              >
+                Visit International Robocon FAQ
+              </a>
+            </div>
+            
+            {/* Poster Image */}
+            <div className="flex-1 flex justify-center">
+              <img
+                src={poster}
+                alt="DD Robocon Poster"
+                className="w-full max-w-md h-auto rounded-lg shadow-lg object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
