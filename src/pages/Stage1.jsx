@@ -346,14 +346,37 @@ const Stage1 = () => {
       </ol>
 
       <a
-  href="https://drive.google.com/file/d/1s259cy1qb71izri3CxRRYuJcdBzo6Mxr/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-center text-3xl font-semibold mb-6 text-blue-600 hover:underline block"
->
-  Click here to download the Guidelines PDF
-</a>
+        href="https://drive.google.com/file/d/1s259cy1qb71izri3CxRRYuJcdBzo6Mxr/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-center text-3xl font-semibold mb-12 text-blue-600 hover:underline block"
+      >
+        Click here to download the Guidelines PDF
+      </a>
 
+      {/* Stage 1 Results Section */}
+      <div className="mt-16 mb-12 p-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-900 rounded-3xl shadow-[0_20px_50px_rgba(31,_38,_135,_0.37)] text-white text-center transform transition-all duration-500 hover:shadow-[0_25px_60px_rgba(31,_38,_135,_0.5)] border border-white/10 backdrop-blur-sm">
+        <div className="inline-block px-4 py-1 mb-6 rounded-full bg-white/20 text-sm font-medium tracking-wider uppercase animate-bounce">
+          Announcement
+        </div>
+        <h2 className="text-5xl font-black mb-6 tracking-tight">
+          Stage 1 Results Out Now!
+        </h2>
+        <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl mx-auto leading-relaxed">
+          The evaluation for DD-Robocon 2026 Stage I is complete. Check out the results below to see if your team made it!
+        </p>
+        <a
+          href="https://drive.google.com/file/d/1P21eLtWhWtalVJfnGlfF9NwoMuAvA_u3/view"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center bg-white text-blue-900 font-extrabold py-5 px-12 rounded-2xl shadow-xl hover:bg-blue-50 hover:-translate-y-1 transition-all duration-300 text-xl group"
+        >
+          <span>View Results PDF</span>
+          <svg className="ml-3 w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
     </div>
   );
 };

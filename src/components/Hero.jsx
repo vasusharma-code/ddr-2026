@@ -148,11 +148,11 @@ const Hero = () => {
             <div className="w-full md:w-2/3">
               {/* Alert Box for Guidelines */}
               <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScAmtcvwztv9Lcv_iVmPfFjlNJeEsSGdxXTnYtqzx3aN2qe-w/viewform?usp=dialog" className="text-lg font-bold cursor-pointer hover:underline"
+                <a href="https://drive.google.com/file/d/1P21eLtWhWtalVJfnGlfF9NwoMuAvA_u3/view?usp=sharing" className="text-lg font-bold cursor-pointer hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                 📢Pre Register!
+                 📢Result of Stage-I Out Now!
                 </a>
               </div>
 
@@ -188,8 +188,8 @@ const Hero = () => {
                     description: "Submission of Stage 1 (concept note and idea solution)",
                   },
                   {
-                    newDate: "28-Feb-2026",
-                    displayDate: "28",
+                    newDate: "10-Mar-2026",
+                    displayDate: "10",
                     description: "Shortlisting for Stage 1",
                   },
                   {
