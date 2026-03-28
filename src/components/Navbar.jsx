@@ -77,6 +77,7 @@ const Navbar = () => {
             <li><Link to="/" className="nav">Home</Link></li>
             <li><Link to="/contest-rules" className="nav">Contest Rules</Link></li>
             <li><Link to="/game-videos" className="nav">Game Videos</Link></li>
+            {/* <li><Link to="/mathworks" className="nav">MathWorks Modeling Award</Link></li> */}
             {/* <li><Link to="/registration" className="nav">Registration</Link></li> */}
             <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             {/* <li><Link to="/stage1" className="nav">Stage-1</Link></li>
@@ -102,9 +103,9 @@ const Navbar = () => {
                 <li>
                   <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100">Sponsorship</Link>
                 </li>
-                {/* <li>
-                  <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100">MathWorks</Link>
-                </li> */}
+                <li>
+                  <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100">MathWorks Modeling Award</Link>
+                </li>
               </ul>
             </li>
             <li><Link to="/contact" className="nav">Contact</Link></li>
@@ -182,12 +183,13 @@ const Navbar = () => {
                   <li>
                     <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>Sponsorship</Link>
                   </li>
-                  {/* <li>
-                    <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks</Link>
-                  </li> */}
+                  <li>
+                    <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks Modeling Award</Link>
+                  </li>
                 </ul>
               )}
             </li>
+            {/* <li><Link to="/mathworks" className="nav" onClick={closeMobileMenu}>MathWorks Modeling Award</Link></li> */}
             <li>
               <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
             </li>

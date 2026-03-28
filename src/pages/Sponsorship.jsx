@@ -113,7 +113,19 @@ const Sponsorship = () => (
         <li>Showcase Your Commitment: Demonstrate your organization's dedication to advancing science, technology, and innovation in India.</li>
       </ul>
     </section>
-    
+
+    {/* MathWorks Modeling Award CTA */}
+    <section className="mb-10 bg-white rounded-lg shadow p-6">
+      <h2 className="text-2xl font-bold text-blue-700 mb-3 uppercase tracking-wide">MathWorks Modeling Award</h2>
+      <p className="text-gray-700 mb-2">
+        Learn how teams can participate in the MathWorks Modeling Award 2026 and submit their Phase 1 report by June 14, 2026.
+      </p>
+      <p className="text-gray-700 mb-4">
+        Click below to read the complete details and submission process.
+      </p>
+      <a href="/mathworks" className="inline-block px-5 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition">MathWorks Modeling Award Details</a>
+    </section>
+
     {/* Sponsorship Matrix */}
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">Sponsorship Matrix 2026</h2>
