@@ -1,130 +1,137 @@
 import React from "react";
+import driveScreenshot from "../assets/DriveSS.png";
 
-const Stage2Guidelines = () => {
+const Stage2 = () => {
   return (
-    <div className="p-8 min-h-screen mt-14 bg-gray-50">
-      <h1 className="text-3xl font-bold text-blue-700 text-center mb-8">
-        Guidelines for the Evaluation of DD-ROBOCON 2025 (Stage-2)
-      </h1>
+    <div className="p-8 min-h-screen mt-14 bg-gray-50 text-gray-800">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-3xl font-bold text-blue-700 text-center mb-8 leading-snug">
+          Guidelines for the Evaluation of
+          <br />
+          DD-ROBOCON 2026 (Stage-II)
+        </h1>
 
-      <section className="mb-8">
-        <p className="text-gray-800 mb-4">
-          As part of Stage-2, all qualified teams from Stage-1 need to submit the following videos by the deadline specified on the website while adhering to the offline rulebook (the link for submitting the videos will be shared soon):
+        <p className="mb-6 text-lg leading-8">
+          As part of Stage-II, all qualified teams from Stage-I need to submit the
+          following videos by the deadline specified on the website while adhering to the
+          offline rulebook (the link for submitting the videos will be shared soon):
         </p>
 
-        <ol className="list-decimal ml-6 text-gray-800 space-y-4">
+        <ol className="list-decimal ml-8 space-y-6 text-lg leading-8">
           <li>
-            <span className="font-semibold">Measurement (maximum 120 seconds):</span> Measurement of the robot’s (R-1 and R-2) complete dimensions, including length, width, height, and weight. Measurement of the ball’s diameter and weight. Measurement of the basket’s diameter and height. Measurement of the 3-point zone and 2-point zone. Measurement of the basketball court (length, width, etc). All measurements must be completed within the allotted time.
+            <span className="font-semibold">Measurements: (maximum 120 seconds) - - -</span>
+            <div className="mt-2 ml-2">
+              <p>Measurement of the robot’s (R-1and R-2) complete dimensions (initial and extended), including length, width, height, and weight.</p>
+              <p>Measurement of Staffs, Spearheads and Kung-Fu Scrolls (KFS) used in the demonstration</p>
+              <p>Measurement of the Game Field(length, width, etc), Meihua Forest, Tic-Tac-Toe Rack</p>
+              <p>All measurements must be completed within the allotted time.</p>
+            </div>
           </li>
+
           <li>
-            <span className="font-semibold">Mechanisms [70 points]:</span> In this video (maximum duration: 120 seconds), the following functionalities must be demonstrated:
-            <ol className="list-lowerAlpha ml-6 mt-2 space-y-2">
-              <li>
-                <span className="font-semibold">(a)</span> Ball is picked up by Robot-1 (R-1) or Robot-2 (R-2) from the ground [10 Points]
-              </li>
-              <li>
-                <span className="font-semibold">(b)</span> R-1/R-2 will pass ball to the other robot or dribble, and then perfectly thrown into the basket. [30+30 points]
-              </li>
-              <li className="mt-2 italic">OR</li>
-              <li>
-                Robot-1 (R-1) or Robot-2 (R-2) pick up or load the ball into the robot.
-                <ol className="list-lowerAlpha ml-6 mt-2 space-y-2">
-                  <li>
-                    <span className="font-semibold">(a)</span> Upon gaining control of the ball, the robot must immediately pass it, either without changing its location or while in the air, to the teammate robot from a distance of at least 1000 mm. [40 points]
-                  </li>
-                  <li>
-                    <span className="font-semibold">(b)</span> The teammate robot must then successfully throw the ball into the basket. [30 points]
-                  </li>
-                </ol>
-              </li>
-              <li className="mt-2 italic">OR</li>
-              <li>
-                Robot-1 (R-1) or Robot-2 (R-2) load the ball into the robot.
-                <ol className="list-lowerAlpha ml-6 mt-2 space-y-2">
-                  <li>
-                    <span className="font-semibold">(a)</span> Either robot then dribble the ball from a height of at least 700 mm above the playing surface. [30 points]
-                  </li>
-                  <li>
-                    <span className="font-semibold">(b)</span> After dribbling, the robot must successfully throw the ball into the basket. [40 points]
-                  </li>
-                </ol>
-              </li>
-              <li className="mt-2">
-                <span className="font-semibold">Additional Points:</span> All the above processes must be performed at least twice. For every passing, the ball must be thrown to the teammate robot from a distance of at least 1000 mm, measured from the nearest points of the robots. A robot may successfully shoot the ball without dribbling if it does so immediately upon gaining control of the ball without changing its location or while in the air.
-              </li>
-            </ol>
+            <div>
+              <span className="font-semibold">Mechanisms (70 points)</span>
+              <div>(Maximum 120 seconds)</div>
+            </div>
+
+            <div className="mt-4 ml-2 space-y-4">
+              <div>
+                <p className="font-semibold">2.1 Weapon Assembly [20 Points]</p>
+                <p>(a) R1 picking up a Staff and R2 picking up a Spearhead [10 Points]</p>
+                <p>(b) The successful collaboration to assemble a weapon without physical contact between the two robots [10 Points]</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">2.2 R1 Picks Up Game Object [10 Points]</p>
+                <p>R1 manoeuvres along the Pathway and picks up and stores an R1 KFS</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">2.3 R2 Picks Up Game Object [20 Points]</p>
+                <p>(a) R2 autonomously navigates forest block and picks up and stores an R2 KFS [15 points]</p>
+                <p>(b) Demonstration of R2&apos;s autonomous object (KFS) identification [5 points]</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">2.4 Arena Entry and KFS Placement [20 Points]</p>
+                <p>(a) R1 carries an assembled weapon and enters the Arena via the Ramp [5 points]</p>
+                <p>(b) R1 places KFS in bottom Tic-Tac-Toe Rack slot [5 points]</p>
+                <p>(c) R1 places KFS in middle Tic-Tac-Toe Rack slot [10 points]</p>
+              </div>
+            </div>
           </li>
+
           <li>
-            <span className="font-semibold">Jumping and Shooting Mechanism [30 points]:</span> Show the following (maximum 60 seconds):
-            <ol className="list-lowerAlpha ml-6 mt-2 space-y-2">
-              <li>
-                <span className="font-semibold">(a)</span> Jumping Mechanism – The robot should demonstrate a stable and controlled jump at least twice. [10 points]
-              </li>
-              <li>
-                <span className="font-semibold">(b)</span> Shooting Mechanism –
-                <ol className="list-lowerAlpha ml-6 mt-1 space-y-1">
-                  <li>
-                    <span className="font-semibold">(i)</span> Shoot from the 3-Point Zone – The shot must be taken from the designated 3-point zone and successfully reach the basket at least twice. [12 points]
-                  </li>
-                  <li>
-                    <span className="font-semibold">(ii)</span> Shoot from the 2-Point Zone – The shot must be taken from the designated 2-point zone and successfully reach the basket at least twice. [8 points]
-                  </li>
-                </ol>
-              </li>
-            </ol>
+            <div>
+              <span className="font-semibold">Lifting and Weapon Utilization (30 points)</span>
+              <div>(Maximum 60 seconds)</div>
+            </div>
+
+            <div className="mt-4 ml-2 space-y-4">
+              <div>
+                <p className="font-semibold">3.1 R1 lifts R2 to place Top Row KFS [15 Points]</p>
+                <p>(a) R1 lifts or carries R2 to place a KFS into the Top Row of Tic-Tac-Toe Rack [8 Points]</p>
+                <p>(b) R2 places KFS in Top row [7 Points]</p>
+              </div>
+
+              <div>
+                <p className="font-semibold">3.2 Weapon Utilization [15 Points]</p>
+                <p>(a) R1 using an assembled weapon to displace an already placed KFS in the rack [10 Points]</p>
+                <p>(b) Demonstration of placing the used weapon parts into the Used Weapon Area [5 Points]</p>
+              </div>
+            </div>
           </li>
         </ol>
-      </section>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">Note 1:</h2>
-        <p className="text-gray-800 ml-6">
-          Measurement of distances of the game field should be clearly shown in the videos.
-        </p>
-      </section>
+        <div className="mt-10">
+          <h2 className="text-2xl font-semibold text-blue-700 mb-4">Submission Details:</h2>
+          <p className="text-lg leading-8 mb-4">
+            For each mechanism, one separate video must be prepared. Additional instructions for all videos:
+          </p>
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4">Submission Details:</h2>
-        <p className="text-gray-800 mb-4">
-          For each mechanism, one separate video must be prepared. Additional instructions for all videos:
-        </p>
-        <ol className="list-decimal ml-6 text-gray-800 space-y-2">
-          <li>
-            All the files should be uploaded to a single Google Drive folder which will be accessible by the judges. Only the link should be submitted via a Google Form (to be released soon).
-          </li>
-          <li>
-            The combined size of all the files should not exceed 1 GB. The total video duration must not exceed 5 minutes.
-          </li>
-          <li>
-            Robot functionality should be demonstrated in a single, continuous shot.
-          </li>
-          <li>
-            Use multiple cameras for better visualization with one camera showing the complete view.
-          </li>
-          <li>
-            Compliance with competition rules will be considered during evaluation.
-          </li>
-          <li>
-            All videos should be named as “Team Name demonstrated mechanism” to ensure proper evaluation and be in the .mp4 or .avi format only.
-          </li>
-        </ol>
-      </section>
+          <ol className="list-decimal ml-8 space-y-5 text-lg leading-8">
+            <li>
+              <p>All the files should be uploaded to a single Google Drive folder which will be accessible by the judges. Only the link should be submitted via a Google Form (to be released soon).</p>
+              <p className="mt-3">Please note the following requirements for Stage-II submission:</p>
+              <div className="mt-2 ml-6 space-y-2">
+                <p>(i) The team folder should contain Measurements Video as stated in point 1.</p>
+                <p>(i) Two distinct folders must be created within the team folder demonstrating the following:</p>
+                <div className="ml-6">
+                  <p>○ Mechanisms (This should contain separate videos for mechanisms as stated in Point 2: 2.1, 2.2 , 2.3 and 2.4)</p>
+                  <p>○ Lifting and Weapon Utilization  (This should contain separate videos for mechanisms as stated in Point 3: 3.1 and 3.2)</p>
+                </div>
+                <p>(ii) A separate video must be submitted for each individual mechanism.</p>
+                <p>
+                  (iii) All videos should be named as {"<Team Name> - <demonstrated mechanism>"} to ensure proper evaluation and be in the .mp4 or .avi format only.
+                </p>
+              </div>
 
-      <section>
-        
-        <div className="flex justify-center">
-          <a
-            href="https://drive.google.com/file/d/1hQlK2cM1NxtTTscVtoNggKhk3ETadPbq/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-2xl  py-4 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-center"
-          >
-            Stage 2 Result Out Now
-          </a>
+              <div className="mt-8 flex justify-center">
+                <img
+                  src={driveScreenshot}
+                  alt="Google Drive submission format"
+                  className="w-full max-w-2xl border border-gray-200 shadow-sm"
+                />
+              </div>
+            </li>
+
+            <li>
+              The combined size of all the files should not exceed 1 GB. The total video duration (All 7 videos) must not exceed 5 minutes.
+            </li>
+            <li>
+              Robot functionality for each mechanism demonstration should be in a single, continuous shot.
+            </li>
+            <li>
+              Use multiple cameras for better visualization with one camera showing the complete view.
+            </li>
+            <li>
+              Compliance with competition rules will be considered during evaluation.
+            </li>
+          </ol>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default Stage2Guidelines;
+export default Stage2;

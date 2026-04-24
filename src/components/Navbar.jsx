@@ -80,6 +80,7 @@ const Navbar = () => {
             {/* <li><Link to="/mathworks" className="nav">MathWorks Modeling Award</Link></li> */}
             {/* <li><Link to="/registration" className="nav">Registration</Link></li> */}
             <li><Link to="/stage1" className="nav">Stage-1</Link></li>
+            <li><Link to="/stage2" className="nav">Stage-2</Link></li>
             {/* <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             <li><Link to="/stage2" className="nav">Stage-2</Link></li>
             <li><Link to="/final" className="nav">Final</Link></li> */}
@@ -155,6 +156,9 @@ const Navbar = () => {
             </li> */}
             <li>
               <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
+            </li>
+            <li>
+              <Link to="/stage2" className="nav" onClick={closeMobileMenu}>Stage-2</Link>
             </li>
             {/* <li>
               <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
