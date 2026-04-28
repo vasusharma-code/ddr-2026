@@ -56,7 +56,7 @@ const Stage2 = () => {
                 <p className="font-semibold">2.4 Arena Entry and KFS Placement [20 Points]</p>
                 <p>(a) R1 carries an assembled weapon and enters the Arena via the Ramp [5 points]</p>
                 <p>(b) R1 places KFS in bottom Tic-Tac-Toe Rack slot [5 points]</p>
-                <p>(c) R1 places KFS in middle Tic-Tac-Toe Rack slot [10 points]</p>
+                <p>(c) R2 places KFS in middle Tic-Tac-Toe Rack slot [10 points]</p>
               </div>
             </div>
           </li>
