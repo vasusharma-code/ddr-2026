@@ -129,6 +129,17 @@ const Stage2 = () => {
             </li>
           </ol>
         </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScSwROPlVp0oGLrlgoxyWsyaGigIkuMmOKQkL-ZCwIhWihKuQ/viewform?fbzx=-7565858004056651111"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full max-w-xl text-center bg-blue-700 hover:bg-blue-800 text-white text-xl font-semibold py-5 px-8 rounded-2xl shadow-lg transition-colors duration-200"
+          >
+           Stage II Submission
+          </a>
+        </div>
       </div>
     </div>
   );
