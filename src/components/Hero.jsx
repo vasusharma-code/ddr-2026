@@ -193,7 +193,16 @@ const Hero = () => {
                     description: "Shortlisting for Stage 1",
                   },
                   {
-                    newDate: "15-May-2026",
+                    newDate: (
+                      <>
+                        <span className="font-bold block text-[#EF4444] text-base md:text-lg mb-1">
+                          15-May-2026 (No Fee)
+                        </span>
+                        <span className="font-semibold block text-[#EF4444] text-sm md:text-base">
+                          20-May-2026 (Late fee Rs.5000 + 18% GST)
+                        </span>
+                      </>
+                    ),
                     displayDate: "15",
                     description: "Deadline for Stage 2 (video submission)",
                   },
