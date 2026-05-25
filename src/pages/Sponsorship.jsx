@@ -128,41 +128,51 @@ const Sponsorship = () => (
 
     {/* Sponsorship Matrix */}
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">Sponsorship Matrix 2026</h2>
-      <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-300 text-sm rounded-lg overflow-hidden">
-          <thead className="bg-gray-100">
+      <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">DD Robocon 2026 Sponsorship Matrix</h2>
+      <div className="overflow-x-auto rounded-3xl border border-gray-300 bg-white shadow-sm">
+        <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
+          <thead className="bg-blue-100 text-gray-900">
             <tr>
-              <th className="border px-2 py-1 font-bold">Benefit</th>
-              <th className="border px-2 py-1 font-bold">Platinum</th>
-              <th className="border px-2 py-1 font-bold">Gold</th>
-              <th className="border px-2 py-1 font-bold">Silver</th>
-              <th className="border px-2 py-1 font-bold">Bronze</th>
-              <th className="border px-2 py-1 font-bold">Stall</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Item Code</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Opportunity</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Platinum</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Gold</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Silver</th>
+              <th className="border border-gray-300 px-3 py-3 font-semibold">Bronze</th>
             </tr>
           </thead>
           <tbody>
             {[
-              ["Link on Competition Website", "Yes", "Yes", "Yes", "Yes", "Yes"],
-              ["Promotional Emails to Teams", "Yes", "Yes", "Yes", "Yes", "No"],
-              ["Booth for Product Display", "Yes", "Yes", "Yes", "No", "Yes"],
-              ["Logo on Participant Certificates", "Yes", "Yes", "Yes", "No", "No"],
-              ["Ads on Website (3 Months)", "Yes", "Yes", "No", "No", "Yes"],
-              ["Entrance Banners with Theme", "Yes", "Yes", "Yes", "No", "No"],
-              ["Banners Near Game Field", "Yes", "Yes", "Yes", "No", "No"],
-              ["People allowed as a Sponsor in the Event", "Yes", "Yes", "Yes", "No", "Yes"],
-              ["Speaking Slot at Inauguration Ceremony", "Yes", "Yes", "No", "No", "No"],
-              ["Social Media Promotions Weekly", "Yes", "Yes", "Yes", "No", "No"],
+              ["RCON 1", "Link to Company website through Competition website", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 2", "Promotional E-mail Communication to all registered Members", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 3", "Stall to display products on 4-5 July", "6m x 2m", "4m x 2m", "3m x 2m", "2m x 2m"],
+              ["RCON 4", "Sponsor Logo on Participant Certificates", "Yes", "Yes", "No", "No"],
+              ["RCON 5", "Company Advertisement on Competition Website (May-June-July)", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 6", "Banner at Venue Entry Gate", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 7", "No. Banner Inside Competition Venue (3x2)", "5", "3", "2", "1"],
+              ["RCON 8", "ID Card Sponsorship (with logo) with an additional 200000 cost", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 9", "Company Video during the event duration", "10 min", "5 min", "3 min", "2 min"],
+              ["RCON 10", "Speaking slot at Inauguration Ceremony", "Yes", "No", "No", "No"],
+              ["RCON 11", "Digital Promotion on Social Media", "Yes", "Yes", "Yes", "Yes"],
+              ["RCON 12", "No. of Banners around Practice Field (3x2)", "3", "2", "1", "1"],
+              ["RCON 13", "1 Judge for the Event", "Yes", "No", "No", "No"],
+              ["RCON 14", "Stage Seating at the opening ceremony", "Yes", "No", "No", "No"],
+              ["RCON 15", "Number of members allowed at the event", "5", "3", "2", "2"],
+              ["Sponsorship Cost", "", "1200000", "600000", "400000", "300000"],
+              ["Discounted Early Bird Package Till 15 June", "", "1000000", "500000", "300000", "250000"],
             ].map((row, idx) => (
               <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                 {row.map((cell, i) => (
-                  <td key={i} className="border px-2 py-1 text-center font-medium">{cell}</td>
+                  <td key={i} className="border border-gray-300 px-3 py-3 text-center text-sm font-medium">{cell}</td>
                 ))}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p className="mt-4 text-sm text-gray-700">
+        ID Card Sponsorship is available at an additional cost of 200000 separate from the sponsorship cost.
+      </p>
     </section>
     
     {/* Sponsors Section */}

@@ -92,6 +92,11 @@ const Stage2 = () => {
               </tr>
             </thead>
             <tbody>
+              <tr className="bg-emerald-100 text-emerald-900">
+                <td colSpan="6" className="border-b border-emerald-200 px-4 py-3 text-center font-semibold text-lg">
+                  FOLLOWING TEAMS ARE SHORTLISTED FOR FINAL
+                </td>
+              </tr>
               {stage2Results.map((row, index) => (
                 <tr key={row.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                   <td className="border-b border-gray-200 px-4 py-4 text-center font-medium text-gray-700">{row.id}</td>
