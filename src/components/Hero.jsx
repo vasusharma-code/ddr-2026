@@ -148,11 +148,11 @@ const Hero = () => {
             <div className="w-full md:w-2/3">
               {/* Alert Box for Guidelines */}
               <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
-                <a href="https://drive.google.com/file/d/1P21eLtWhWtalVJfnGlfF9NwoMuAvA_u3/view?usp=sharing" className="text-lg font-bold cursor-pointer hover:underline"
+                <a href="https://drive.google.com/file/d/1pBYntc6V4U4NFvm76N5GFljvOn9Bxojn/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                 📢Result of Stage-I Out Now!
+                 📢Result of Stage-II Out Now!
                 </a>
               </div>
 
