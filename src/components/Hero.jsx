@@ -148,7 +148,7 @@ const Hero = () => {
             <div className="w-full md:w-2/3">
               {/* Alert Box for Guidelines */}
               <div className="bg-yellow-500 text-white text-center py-3 px-6 rounded-lg shadow-lg mb-6 transition-transform hover:scale-105 hover:shadow-2xl">
-                <a href="https://drive.google.com/file/d/1pBYntc6V4U4NFvm76N5GFljvOn9Bxojn/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1hI60BsF9FzvkiyjQ1KZN8WdP_xXzbYn8/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

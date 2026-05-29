@@ -22,7 +22,7 @@ const stage2Results = [
   { id: 18, institute: "JSPM Rajarshi Shahu College of Engineering, Pune", team: "Team CiPHER", stage1: "89.5", stage2: "37", total: "55" },
   { id: 19, institute: "K J Somaiya Institute of Technology", team: "Team KJSIT Robocon", stage1: "89", stage2: "70", total: "76" },
   { id: 20, institute: "K.J. Somaiya School of Engineering", team: "Team (KJSSE) Robocon - KJ Somaiya School of Engineering", stage1: "96", stage2: "70", total: "79" },
-  { id: 21, institute: "KIET Deemed to be university", team: "Quazi jiyaur Rahman", stage1: "93", stage2: "95", total: "94" },
+  { id: 21, institute: "KIET Deemed to be university", team: "Team Dinobots", stage1: "93", stage2: "95", total: "94" },
   { id: 22, institute: "Kumaraguru College of Technology", team: "Team Q-botix", stage1: "94", stage2: "90", total: "91" },
   { id: 23, institute: "LD COLLEGE OF ENGINEERING", team: "TEAM ROBOCON LDCE", stage1: "97.5", stage2: "100", total: "99" },
   { id: 24, institute: "LJ INSTITUTES OF ENGINEERING AND TECHNOLOGY", team: "TEAM FALCON", stage1: "83", stage2: "68", total: "73" },
@@ -69,7 +69,7 @@ const Stage2 = () => {
               <p className="text-xl font-semibold text-gray-900">Download the official Stage II result sheet from the link below.</p>
             </div>
             <a
-              href="https://drive.google.com/file/d/1pBYntc6V4U4NFvm76N5GFljvOn9Bxojn/view?usp=sharing"
+              href="https://drive.google.com/file/d/1hI60BsF9FzvkiyjQ1KZN8WdP_xXzbYn8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-yellow-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white shadow hover:bg-yellow-600 transition-colors duration-200"

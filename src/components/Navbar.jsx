@@ -81,9 +81,7 @@ const Navbar = () => {
             {/* <li><Link to="/registration" className="nav">Registration</Link></li> */}
             <li><Link to="/stage1" className="nav">Stage-1</Link></li>
             <li><Link to="/stage2" className="nav">Stage-2</Link></li>
-            {/* <li><Link to="/stage1" className="nav">Stage-1</Link></li>
-            <li><Link to="/stage2" className="nav">Stage-2</Link></li>
-            <li><Link to="/final" className="nav">Final</Link></li> */}
+            <li><Link to="/final" className="nav">Final</Link></li>
             <li className="relative">
               <span
                 className="nav cursor-pointer select-none"
@@ -160,16 +158,9 @@ const Navbar = () => {
             <li>
               <Link to="/stage2" className="nav" onClick={closeMobileMenu}>Stage-2</Link>
             </li>
-            {/* <li>
-              <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
-            </li>
             <li>
-              <Link to="/stage2" className="nav" onClick={closeMobileMenu}>Stage-2</Link>
-            </li>
-             <li>
               <Link to="/final" className="nav" onClick={closeMobileMenu}>Final</Link>
             </li>
-           */}
            
             <li>
               <span
