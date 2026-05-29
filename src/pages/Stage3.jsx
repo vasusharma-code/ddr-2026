@@ -61,9 +61,9 @@ const Stage3 = () => (
 
         <h2 className="text-2xl font-bold text-blue-700 mt-8">Section-B</h2>
 
-        <p>1. Permission Letter from your Institute to participate is to be filled in and submitted in the Participation form by June 10, 2026 (11:59 PM) for successful confirmation of physical participation during July 2-5, 2026. [Participation form].</p>
+        <p>1. Permission Letter from your Institute to participate is to be filled in and submitted in the <a href="https://docs.google.com/forms/d/1ESONas0xzns_onGy-FfyvAjJIutZxQoqti_MmQ5jeVE/viewform?edit_requested=true" target="_blank" rel="noreferrer" className="text-blue-700 underline">Participation form</a> by June 10, 2026 (11:59 PM) for successful confirmation of physical participation during July 2-5, 2026.</p>
 
-        <p>2. The Permission Letter is to be obtained from the Director/Principal/HOD with their signature in original with seal (click here for the format).</p>
+        <p>2. The Permission Letter is to be obtained from the Director/Principal/HOD with their signature in original with seal (<a href="https://docs.google.com/document/d/19giW5RNXlVvfAS2DRneMOoBJUy4v8VLe/edit?usp=sharing&ouid=104266911694900133464&rtpof=true&sd=true" target="_blank" rel="noreferrer" className="text-blue-700 underline">click here for the format</a>).</p>
 
         <p>3. Each qualifying team MUST also fill up their travel plan by filling up another form for their pick-up and drop from nearby stations only (New Delhi, Old Delhi and Hazrat Nizamuddin). Google Form (travel plan) is to be filled and submitted by June 15, 2026 (11:59 PM)</p>
 
