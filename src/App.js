@@ -1,6 +1,6 @@
 import "./App.css";
 import Homepage from "./pages/Homepage";
-import { Route,Routes } from "react-router-dom";
+import { Navigate, Route,Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Important from "./pages/Important";
@@ -32,6 +32,8 @@ function App() {
       <Route path="/mathworks" element={<MathWorksModelingAward/>}/>
       <Route path="/stage2" element={<Stage2/>}/>
       <Route path="/sponsorship" element={<Sponsorship/>}/>
+      <Route path="/sponsors" element={<Navigate to="/sponsorship" replace />}/>
+      <Route path="/sponsor" element={<Navigate to="/sponsorship" replace />}/>
       <Route path="/final" element={<Stage3/>}/>
       
     </Routes>
