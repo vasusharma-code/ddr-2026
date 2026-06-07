@@ -9,6 +9,7 @@ import GameVideoPage from "./pages/GameVideoPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import Stage1 from "./pages/Stage1";
 import MathWorksModelingAward from "./pages/MathWorksModelingAward";
+import AutodeskFusionAward from "./pages/AutodeskFusionAward";
 import Stage2 from "./pages/Stage2";
 import Sponsorship from "./pages/Sponsorship";
 import Stage3 from "./pages/Stage3";
@@ -30,6 +31,7 @@ function App() {
       <Route path="/contact" element={<ContactUsPage/>}/>
       <Route path="/stage1" element={<Stage1/>}/>
       <Route path="/mathworks" element={<MathWorksModelingAward/>}/>
+      <Route path="/autodesk-fusion-award" element={<AutodeskFusionAward/>}/>
       <Route path="/stage2" element={<Stage2/>}/>
       <Route path="/sponsorship" element={<Sponsorship/>}/>
       <Route path="/sponsors" element={<Navigate to="/sponsorship" replace />}/>

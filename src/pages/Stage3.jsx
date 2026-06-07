@@ -67,6 +67,21 @@ const Stage3 = () => (
 
         <p>3. Each qualifying team MUST also fill up their travel plan by filling up another form for their pick-up and drop from nearby stations only (New Delhi, Old Delhi and Hazrat Nizamuddin). Google Form (travel plan) is to be filled and submitted by June 15, 2026 (11:59 PM)</p>
 
+        <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm">
+          <p className="text-xl font-bold text-blue-800">Travel Form for DD-Robocon 2026</p>
+          <p className="mt-2 text-base leading-7 text-gray-700">
+            Submit your pick-up and drop details for nearby stations through the official travel form by June 15, 2026 at 11:59 PM.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/1vPqU6nUzbfQvSTM2Bl_I9qcUYkFFfAo2-bLccwTU9do/edit"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex rounded-full bg-blue-700 px-5 py-2 font-semibold text-white transition hover:bg-blue-800"
+          >
+            Open Travel Form
+          </a>
+        </div>
+
         <p className="font-bold text-green-700">ALL THE BEST!</p>
       </div>
     </div>

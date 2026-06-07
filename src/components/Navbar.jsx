@@ -105,6 +105,9 @@ const Navbar = () => {
                 <li>
                   <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100">MathWorks Modeling Award</Link>
                 </li>
+                <li>
+                  <Link to="/autodesk-fusion-award" className="block px-4 py-2 hover:bg-gray-100">Autodesk Fusion Award</Link>
+                </li>
               </ul>
             </li>
             <li><Link to="/contact" className="nav">Contact</Link></li>
@@ -180,6 +183,9 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks Modeling Award</Link>
+                  </li>
+                  <li>
+                    <Link to="/autodesk-fusion-award" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>Autodesk Fusion Award</Link>
                   </li>
                 </ul>
               )}

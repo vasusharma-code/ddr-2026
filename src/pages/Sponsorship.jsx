@@ -126,6 +126,17 @@ const Sponsorship = () => (
       <a href="/mathworks" className="inline-block px-5 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition">MathWorks Modeling Award Details</a>
     </section>
 
+    <section className="mb-10 bg-white rounded-lg shadow p-6">
+      <h2 className="text-2xl font-bold text-cyan-700 mb-3 uppercase tracking-wide">Autodesk Fusion Award</h2>
+      <p className="text-gray-700 mb-2">
+        Explore the Autodesk Fusion Generative Design Challenge 2026, including registration, awards, task structure, PPT requirements, and workshop schedule.
+      </p>
+      <p className="text-gray-700 mb-4">
+        Click below to read the complete challenge details and access the official registration link.
+      </p>
+      <a href="/autodesk-fusion-award" className="inline-block px-5 py-2 bg-cyan-600 text-white rounded font-semibold hover:bg-cyan-700 transition">Autodesk Fusion Award Details</a>
+    </section>
+
     {/* Sponsorship Matrix */}
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">DD Robocon 2026 Sponsorship Matrix</h2>
