@@ -1,20 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import mathworksLogo from "../assets/MathLogo.png";
-import probusLogo from "../assets/ProbusLogo.png";
+import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
 import fsmLogo from "../assets/FSMLogo.png";
 import ihfcLogo from "../assets/IHFCLogo.png";
 import namtechLogo from "../assets/NamtechLogo.png";
-import maxwellLogo from "../assets/MaxwellLogo.jpeg";
-import trsLogo from "../assets/TRSLogo.png";
-import amsLogo from "../assets/AMSLogo.png";
-import yuvaLogo from "../assets/YuvaLogo.png";
-import mctilogo from '../assets/MCITI Logo_B.png';
-import vinsyslogo from '../assets/Vinsys Logo-01-01 1.png';
-import gslogo from '../assets/GSL Logo.png';
-import zeekerslogo from '../assets/ZeekerLogo.png';
-import playlogo from '../assets/PlaytoLabs.jpeg';
-import pflogo from '../assets/pramith_logo-final 1606.jpg';
-import nicolalogo from '../assets/NICOLA LOGO BLUE png.png';
 
 const Sponsorship = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 py-10 px-4 md:px-0 m-2 mt-14">
@@ -123,7 +113,7 @@ const Sponsorship = () => (
       <p className="text-gray-700 mb-4">
         Click below to read the complete details and submission process.
       </p>
-      <a href="/mathworks" className="inline-block px-5 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition">MathWorks Modeling Award Details</a>
+      <Link to="/mathworks" className="inline-block px-5 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition">MathWorks Modeling Award Details</Link>
     </section>
 
     <section className="mb-10 bg-white rounded-lg shadow p-6">
@@ -134,7 +124,7 @@ const Sponsorship = () => (
       <p className="text-gray-700 mb-4">
         Click below to read the complete challenge details and access the official registration link.
       </p>
-      <a href="/autodesk-fusion-award" className="inline-block px-5 py-2 bg-cyan-600 text-white rounded font-semibold hover:bg-cyan-700 transition">Autodesk Fusion Award Details</a>
+      <Link to="/autodesk-fusion-award" className="inline-block px-5 py-2 bg-cyan-600 text-white rounded font-semibold hover:bg-cyan-700 transition">Autodesk Fusion Award Details</Link>
     </section>
 
     {/* Sponsorship Matrix */}
@@ -184,6 +174,39 @@ const Sponsorship = () => (
       <p className="mt-4 text-sm text-gray-700">
         ID Card Sponsorship is available at an additional cost of 200000 separate from the sponsorship cost.
       </p>
+    </section>
+
+    <section className="mb-10">
+      <h2 className="text-2xl font-bold text-green-600 mb-6 uppercase tracking-wide">DD-Robocon 2025 Sponsors</h2>
+      <div className="mb-8">
+        <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Gold Sponsors</h3>
+        <div className="flex flex-wrap justify-center gap-8 items-center">
+          <div className="flex items-center justify-center bg-white rounded-lg shadow p-4">
+            <img
+              src={mathworksLogo}
+              alt="MathWorks"
+              className="object-contain"
+              style={{ height: "120px", width: "240px" }}
+            />
+          </div>
+          <div className="flex items-center justify-center rounded-lg bg-slate-900 shadow p-4">
+            <img
+              src={autodeskLogo}
+              alt="Autodesk"
+              className="object-contain"
+              style={{ height: "120px", width: "240px" }}
+            />
+          </div>
+          <div className="flex items-center justify-center bg-white rounded-lg shadow p-4">
+            <img
+              src={namtechLogo}
+              alt="NAMTECH"
+              className="object-contain"
+              style={{ height: "120px", width: "240px" }}
+            />
+          </div>
+        </div>
+      </div>
     </section>
     
     {/* Sponsors Section */}

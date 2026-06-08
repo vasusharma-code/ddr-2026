@@ -1,4 +1,5 @@
 import React from "react";
+import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
 
 const lightweightMetrics = [
   "Original mass",
@@ -48,6 +49,16 @@ const AutodeskFusionAward = () => {
   return (
     <div className="min-h-screen mt-14 bg-white px-6 py-10 text-gray-900 md:px-8">
       <div className="mx-auto max-w-5xl space-y-8">
+        <div className="flex justify-center">
+          <div className="flex items-center justify-center rounded-3xl bg-slate-900 px-8 py-5 shadow-lg">
+            <img
+              src={autodeskLogo}
+              alt="Autodesk Logo"
+              className="h-20 w-auto object-contain md:h-24"
+            />
+          </div>
+        </div>
+
         <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 via-sky-900 to-cyan-700 text-white shadow-xl">
           <div className="grid gap-6 px-6 py-8 md:grid-cols-[1.4fr_1fr] md:px-8">
             <div>
