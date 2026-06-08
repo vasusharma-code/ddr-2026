@@ -1,15 +1,17 @@
-﻿import React from 'react';
+import React from 'react';
 import mathlogo from '../assets/MathLogo.png';
+import { Card, Container, PageHero, Section } from '../components/DesignSystem';
 
 const MathWorksModelingAward = () => {
   return (
-    <div className='p-8 min-h-screen mt-14 bg-white text-gray-900'>
-      <div className='flex justify-center items-center mb-6'>
-        <img src={mathlogo} alt='MathWorks Logo' className='h-52' />
+    <div className='page-surface text-slate-900'>
+      <PageHero title='DD Robocon India 2026: MathWorks Modeling Award' />
+      <Section>
+        <Container className='max-w-5xl'>
+          <Card as='article' className='document-flow p-5 sm:p-8 lg:p-10'>
+      <div className='flex justify-center items-center mb-8 rounded-lg border border-slate-200 bg-white p-6'>
+        <img src={mathlogo} alt='MathWorks Logo' className='h-40 w-auto object-contain sm:h-52' loading='lazy' />
       </div>
-      <h1 className='text-3xl font-bold mb-6 text-blue-700 text-center'>
-        DD Robocon India 2026: MathWorks Modeling Award
-      </h1>
 
       <section className='mb-6'>
         <p><strong>Event Name:</strong> DD Robocon India 2026: MathWorks Modeling Award</p>
@@ -206,6 +208,9 @@ const MathWorksModelingAward = () => {
           </li>
         </ul>
       </section>
+          </Card>
+        </Container>
+      </Section>
     </div>
   );
 };

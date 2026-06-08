@@ -1,11 +1,12 @@
 import React from "react";
+import { Card, Container, PageHero, Section } from "../components/DesignSystem";
 
 const Stage3 = () => (
-  <div className="p-8 min-h-screen mt-14 bg-gray-50 text-gray-900">
-    <div className="max-w-4xl mx-auto space-y-6">
-      <h1 className="text-3xl font-bold text-blue-700 text-center">
-        Guidelines for NATIONAL DD-ROBOCON 2026 on July 4-5, 2026
-      </h1>
+  <div className="page-surface text-slate-900">
+    <PageHero title="Guidelines for NATIONAL DD-ROBOCON 2026 on July 4-5, 2026" />
+    <Section>
+      <Container className="max-w-4xl">
+        <Card as="article" className="document-flow space-y-6 p-5 sm:p-8 lg:p-10">
 
       <p className="text-lg font-semibold text-red-600 text-center">
         Note: DD-Robocon 2026 will be held physically at IIT Delhi, New Delhi.
@@ -67,7 +68,7 @@ const Stage3 = () => (
 
         <p>3. Each qualifying team MUST also fill up their travel plan by filling up another form for their pick-up and drop from nearby stations only (New Delhi, Old Delhi and Hazrat Nizamuddin). Google Form (travel plan) is to be filled and submitted by June 15, 2026 (11:59 PM)</p>
 
-        <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm">
+        <div className="rounded-lg border border-blue-200 bg-blue-50 p-5 shadow-sm">
           <p className="text-xl font-bold text-blue-800">Travel Form for DD-Robocon 2026</p>
           <p className="mt-2 text-base leading-7 text-gray-700">
             Submit your pick-up and drop details for nearby stations through the official travel form by June 15, 2026 at 11:59 PM.
@@ -76,7 +77,7 @@ const Stage3 = () => (
             href="https://docs.google.com/forms/d/1vPqU6nUzbfQvSTM2Bl_I9qcUYkFFfAo2-bLccwTU9do/edit"
             target="_blank"
             rel="noreferrer"
-            className="mt-4 inline-flex rounded-full bg-blue-700 px-5 py-2 font-semibold text-white transition hover:bg-blue-800"
+            className="mt-4 inline-flex min-h-11 items-center rounded-md bg-blue-700 px-5 py-2 font-semibold !text-white no-underline transition hover:bg-blue-800 hover:!text-white"
           >
             Open Travel Form
           </a>
@@ -84,7 +85,9 @@ const Stage3 = () => (
 
         <p className="font-bold text-green-700">ALL THE BEST!</p>
       </div>
-    </div>
+        </Card>
+      </Container>
+    </Section>
   </div>
 );
 

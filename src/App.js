@@ -1,6 +1,6 @@
 import "./App.css";
 import Homepage from "./pages/Homepage";
-import { Navigate, Route,Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Important from "./pages/Important";
@@ -20,9 +20,10 @@ import RegistrationPage from "./pages/RegistrationPage";
 function App() {
 
   return (
-   <div>
+  <div className="min-h-screen bg-slate-50 text-slate-900">
     <Navbar/>
-    <Routes>
+   <main>
+   <Routes>
       <Route path="/" element={<Homepage/>}/>
       <Route path="/important-dates" element={<Important/>}/>
       <Route path="/contest-rules" element={<ContestRulesPage/>}/>
@@ -39,6 +40,7 @@ function App() {
       <Route path="/final" element={<Stage3/>}/>
       
     </Routes>
+    </main>
     <Footer/>
    </div>
   );

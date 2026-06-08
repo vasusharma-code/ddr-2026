@@ -1,5 +1,6 @@
 import React from "react";
 import driveScreenshot from "../assets/DriveSS.png";
+import { Container, PageHero, Section } from "../components/DesignSystem";
 
 const stage2Results = [
   { id: 1, institute: "A.D. Patel Institute of Technology", team: "Team Prabal", stage1: "93", stage2: "20", total: "44" },
@@ -54,13 +55,12 @@ const specialCaseTeams = [
 
 const Stage2 = () => {
   return (
-    <div className="p-8 min-h-screen mt-14 bg-gray-50 text-gray-800">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-blue-700 text-center mb-8 leading-snug">
-          DD-ROBOCON 2026 Stage II Results
-        </h1>
+    <div className="page-surface text-slate-800">
+      <PageHero title="DD-ROBOCON 2026 Stage II Results" />
+      <Section>
+      <Container>
 
-        <div className="mb-10 rounded-3xl border border-yellow-300 bg-yellow-100 p-6 shadow-sm">
+        <div className="mb-10 rounded-lg border border-amber-200 bg-amber-50 p-6 shadow-sm">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.3em] text-yellow-700 font-semibold mb-2">
@@ -72,14 +72,14 @@ const Stage2 = () => {
               href="https://drive.google.com/file/d/1hI60BsF9FzvkiyjQ1KZN8WdP_xXzbYn8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-yellow-500 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white shadow hover:bg-yellow-600 transition-colors duration-200"
+                className="inline-flex min-h-11 items-center justify-center rounded-md bg-amber-600 px-6 py-3 text-sm font-semibold uppercase tracking-[0.15em] text-white shadow hover:bg-amber-700 transition-colors duration-200"
             >
               View Stage II Results
             </a>
           </div>
         </div>
 
-        <div className="mb-10 overflow-x-auto rounded-3xl border border-gray-200 bg-white shadow-sm">
+        <div className="mb-10 overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
           <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
             <thead className="bg-yellow-300 text-gray-900">
               <tr>
@@ -113,11 +113,11 @@ const Stage2 = () => {
           </table>
         </div>
 
-        <div className="mb-10 rounded-3xl border border-gray-200 bg-slate-50 p-6 shadow-sm">
-          <div className="mb-6 rounded-2xl bg-yellow-200 p-4 text-sm leading-6 text-gray-900">
+        <div className="mb-10 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-gray-900">
             In order to encourage following teams to participate in DD-Robocon 2026, the national evaluation committee has kindly decided to permit them as a special case to participate in National event if they submit improved version of their Robots video and demonstrate tasks by 04-June-2026, 11:59 PM. Once the committee clears revised video they MUST register for final event by 10-June-2026.
           </div>
-          <div className="overflow-x-auto rounded-2xl border border-gray-200 bg-white">
+          <div className="overflow-x-auto rounded-lg border border-gray-200 bg-white">
             <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
               <thead className="bg-yellow-300 text-gray-900">
                 <tr>
@@ -147,6 +147,7 @@ const Stage2 = () => {
           </div>
         </div>
 
+        <div className="content-card p-5 sm:p-8 document-flow">
         <h2 className="text-3xl font-bold text-blue-700 text-center mb-6">Stage II Evaluation Guidelines</h2>
 
         <p className="mb-6 text-lg leading-8">
@@ -246,7 +247,7 @@ const Stage2 = () => {
                 <img
                   src={driveScreenshot}
                   alt="Google Drive submission format"
-                  className="w-full max-w-2xl border border-gray-200 shadow-sm"
+                  className="w-full max-w-2xl rounded-lg border border-gray-200 shadow-sm"
                 />
               </div>
             </li>
@@ -265,7 +266,9 @@ const Stage2 = () => {
             </li>
           </ol>
         </div>
-      </div>
+        </div>
+      </Container>
+      </Section>
     </div>
   );
 };

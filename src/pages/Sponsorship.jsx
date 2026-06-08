@@ -5,17 +5,20 @@ import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
 import fsmLogo from "../assets/FSMLogo.png";
 import ihfcLogo from "../assets/IHFCLogo.png";
 import namtechLogo from "../assets/NamtechLogo.png";
+import { Container, PageHero, Section } from "../components/DesignSystem";
 
 const Sponsorship = () => (
-  <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 py-10 px-4 md:px-0 m-2 mt-14">
-    <h1 className="text-4xl font-extrabold text-blue-700 mb-8 text-center tracking-tight">DD Robocon 2026 Sponsorship</h1>
+  <div className="page-surface">
+    <PageHero title="DD Robocon 2026 Sponsorship" />
+    <Section>
+      <Container className="space-y-10">
     
     {/* About Knowledge Partners */}
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-purple-700 mb-3 uppercase tracking-wide">About Knowledge Partners</h2>
       <div className="flex flex-col md:flex-row gap-8 mb-6">
         {/* IHFC Section */}
-        <div className="flex flex-row items-center bg-white rounded-lg shadow p-4 flex-1">
+        <div className="flex flex-col items-start gap-4 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center flex-1">
           <img
             src={ihfcLogo}
             alt="IHFC"
@@ -38,7 +41,7 @@ const Sponsorship = () => (
           </p>
         </div>
         {/* FSM Section */}
-        <div className="flex flex-row items-center bg-white rounded-lg shadow p-4 flex-1">
+        <div className="flex flex-col items-start gap-4 rounded-lg border border-slate-200 bg-white p-5 shadow-sm sm:flex-row sm:items-center flex-1">
           <img
             src={fsmLogo}
             alt="FSM"
@@ -105,7 +108,7 @@ const Sponsorship = () => (
     </section>
 
     {/* MathWorks Modeling Award CTA */}
-    <section className="mb-10 bg-white rounded-lg shadow p-6">
+    <section className="mb-10 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
       <h2 className="text-2xl font-bold text-blue-700 mb-3 uppercase tracking-wide">MathWorks Modeling Award</h2>
       <p className="text-gray-700 mb-2">
         Learn how teams can participate in the MathWorks Modeling Award 2026 and submit their Phase 1 report by June 14, 2026.
@@ -113,10 +116,10 @@ const Sponsorship = () => (
       <p className="text-gray-700 mb-4">
         Click below to read the complete details and submission process.
       </p>
-      <Link to="/mathworks" className="inline-block px-5 py-2 bg-blue-600 text-white rounded font-semibold hover:bg-blue-700 transition">MathWorks Modeling Award Details</Link>
+      <Link to="/mathworks" className="inline-flex min-h-11 items-center rounded-md bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700">MathWorks Modeling Award Details</Link>
     </section>
 
-    <section className="mb-10 bg-white rounded-lg shadow p-6">
+    <section className="mb-10 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
       <h2 className="text-2xl font-bold text-cyan-700 mb-3 uppercase tracking-wide">Autodesk Fusion Award</h2>
       <p className="text-gray-700 mb-2">
         Explore the Autodesk Fusion Generative Design Challenge 2026, including registration, awards, task structure, PPT requirements, and workshop schedule.
@@ -124,13 +127,13 @@ const Sponsorship = () => (
       <p className="text-gray-700 mb-4">
         Click below to read the complete challenge details and access the official registration link.
       </p>
-      <Link to="/autodesk-fusion-award" className="inline-block px-5 py-2 bg-cyan-600 text-white rounded font-semibold hover:bg-cyan-700 transition">Autodesk Fusion Award Details</Link>
+      <Link to="/autodesk-fusion-award" className="inline-flex min-h-11 items-center rounded-md bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700">Autodesk Fusion Award Details</Link>
     </section>
 
     {/* Sponsorship Matrix */}
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-purple-600 mb-3 uppercase tracking-wide">DD Robocon 2026 Sponsorship Matrix</h2>
-      <div className="overflow-x-auto rounded-3xl border border-gray-300 bg-white shadow-sm">
+      <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
         <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
           <thead className="bg-blue-100 text-gray-900">
             <tr>
@@ -181,7 +184,7 @@ const Sponsorship = () => (
       <div className="mb-8">
         <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Gold Sponsors</h3>
         <div className="flex flex-wrap justify-center gap-8 items-center">
-          <div className="flex items-center justify-center bg-white rounded-lg shadow p-4">
+          <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <img
               src={mathworksLogo}
               alt="MathWorks"
@@ -189,7 +192,7 @@ const Sponsorship = () => (
               style={{ height: "120px", width: "240px" }}
             />
           </div>
-          <div className="flex items-center justify-center rounded-lg bg-slate-900 shadow p-4">
+          <div className="flex items-center justify-center rounded-lg bg-slate-900 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <img
               src={autodeskLogo}
               alt="Autodesk"
@@ -197,7 +200,7 @@ const Sponsorship = () => (
               style={{ height: "120px", width: "240px" }}
             />
           </div>
-          <div className="flex items-center justify-center bg-white rounded-lg shadow p-4">
+          <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <img
               src={namtechLogo}
               alt="NAMTECH"
@@ -396,6 +399,8 @@ const Sponsorship = () => (
         <p>Department of Mechanical Engineering, IIT Delhi, Hauz Khas, New Delhi - 110016, India</p>
       </div>
     </section>
+      </Container>
+    </Section>
   </div>
 );
 

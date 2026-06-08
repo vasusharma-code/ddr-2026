@@ -1,11 +1,13 @@
 import React from "react";
+import { Card, Container, PageHero, Section } from "../components/DesignSystem";
 
 const Stage1 = () => {
   return (
-    <div className="p-8 min-h-screen mt-14">
-      <h1 className="text-3xl font-bold mb-6 text-blue-700 text-center">
-        DD-ROBOCON 2026 Stage I Guidelines
-      </h1>
+    <div className="page-surface">
+      <PageHero title="DD-ROBOCON 2026 Stage I Guidelines" />
+      <Section>
+        <Container className="max-w-5xl">
+          <Card as="article" className="document-flow p-5 sm:p-8 lg:p-10">
 
       <p className="mb-4 text-gray-700">
         As a part of Stage I, all teams need to submit the following online
@@ -45,7 +47,8 @@ const Stage1 = () => {
       <h2 className="text-xl font-semibold mb-4 text-blue-600">
         Evaluation Criteria
       </h2>
-      <table className="table-auto border-collapse border border-gray-400 w-full mb-6">
+      <div className="table-shell mb-6">
+      <table className="modern-table">
         <thead className="bg-blue-100">
           <tr>
             <th className="border border-gray-400 p-2 text-left">
@@ -71,6 +74,7 @@ const Stage1 = () => {
           </tr>
         </tbody>
       </table>
+      </div>
 
       <ol className="list-decimal list-inside mb-6 text-gray-700" start="1">
         <li className="mb-2">
@@ -349,27 +353,27 @@ const Stage1 = () => {
         href="https://drive.google.com/file/d/1s259cy1qb71izri3CxRRYuJcdBzo6Mxr/view?usp=sharing"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-center text-3xl font-semibold mb-12 text-blue-600 hover:underline block"
+        className="mb-12 mt-8 flex min-h-11 items-center justify-center rounded-md border border-blue-200 bg-blue-50 px-5 py-4 text-center text-lg font-semibold text-blue-700 transition hover:bg-blue-100"
       >
         Click here to download the Guidelines PDF
       </a>
 
       {/* Stage 1 Results Section */}
-      <div className="mt-16 mb-12 p-10 bg-gradient-to-br from-blue-700 via-indigo-800 to-purple-900 rounded-3xl shadow-[0_20px_50px_rgba(31,_38,_135,_0.37)] text-white text-center transform transition-all duration-500 hover:shadow-[0_25px_60px_rgba(31,_38,_135,_0.5)] border border-white/10 backdrop-blur-sm">
-        <div className="inline-block px-4 py-1 mb-6 rounded-full bg-white/20 text-sm font-medium tracking-wider uppercase animate-bounce">
+      <div className="mt-12 rounded-lg border border-blue-200 bg-slate-900 p-6 text-center text-white shadow-lg sm:p-10">
+        <div className="inline-block rounded-full border border-white/15 bg-white/10 px-4 py-1 text-sm font-medium uppercase tracking-[0.18em] text-blue-100">
           Announcement
         </div>
-        <h2 className="text-5xl font-black mb-6 tracking-tight">
+        <h2 className="mt-6 text-3xl font-black tracking-normal sm:text-5xl">
           Stage 1 Results Out Now!
         </h2>
-        <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-2xl mx-auto leading-relaxed">
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-blue-100 md:text-xl">
           The evaluation for DD-Robocon 2026 Stage I is complete. Check out the results below to see if your team made it!
         </p>
         <a
           href="https://drive.google.com/file/d/1P21eLtWhWtalVJfnGlfF9NwoMuAvA_u3/view"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-white text-blue-900 font-extrabold py-5 px-12 rounded-2xl shadow-xl hover:bg-blue-50 hover:-translate-y-1 transition-all duration-300 text-xl group"
+          className="group mt-8 inline-flex min-h-11 items-center justify-center rounded-md bg-white px-6 py-3 text-base font-extrabold text-blue-950 shadow-sm transition hover:bg-blue-50"
         >
           <span>View Results PDF</span>
           <svg className="ml-3 w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -377,6 +381,9 @@ const Stage1 = () => {
           </svg>
         </a>
       </div>
+          </Card>
+        </Container>
+      </Section>
     </div>
   );
 };

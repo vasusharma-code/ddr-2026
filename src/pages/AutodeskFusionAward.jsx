@@ -1,5 +1,6 @@
 import React from "react";
 import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
+import { FAQAccordion } from "../components/DesignSystem";
 
 const lightweightMetrics = [
   "Original mass",
@@ -47,10 +48,10 @@ const faqItems = [
 
 const AutodeskFusionAward = () => {
   return (
-    <div className="min-h-screen mt-14 bg-white px-6 py-10 text-gray-900 md:px-8">
+    <div className="page-surface px-4 py-10 text-slate-900 sm:px-6 md:px-8">
       <div className="mx-auto max-w-5xl space-y-8">
         <div className="flex justify-center">
-          <div className="flex items-center justify-center rounded-3xl bg-slate-900 px-8 py-5 shadow-lg">
+          <div className="flex items-center justify-center rounded-lg bg-slate-900 px-8 py-5 shadow-lg">
             <img
               src={autodeskLogo}
               alt="Autodesk Logo"
@@ -59,7 +60,7 @@ const AutodeskFusionAward = () => {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 via-sky-900 to-cyan-700 text-white shadow-xl">
+        <div className="overflow-hidden rounded-lg bg-slate-900 text-white shadow-xl">
           <div className="grid gap-6 px-6 py-8 md:grid-cols-[1.4fr_1fr] md:px-8">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-cyan-200">
@@ -78,7 +79,7 @@ const AutodeskFusionAward = () => {
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-sm">
+            <div className="rounded-lg border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-sm uppercase tracking-[0.28em] text-cyan-100">Submission Deadline</p>
               <p className="mt-3 text-2xl font-bold">24 June 2026</p>
               <p className="text-sm text-cyan-100">23:00 India Time</p>
@@ -91,7 +92,7 @@ const AutodeskFusionAward = () => {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSd62wrCImwSb8DAshwaZK_VqYP190A_VEn8WOiaJM5v_z5i6g/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+                  className="inline-flex min-h-11 items-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-600"
                 >
                   Register Now
                 </a>
@@ -99,7 +100,7 @@ const AutodeskFusionAward = () => {
                   href="/autodesk-fusion-generative-design-challenge-2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="inline-flex min-h-11 items-center rounded-md border border-white/40 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   View PDF
                 </a>
@@ -108,7 +109,7 @@ const AutodeskFusionAward = () => {
           </div>
         </div>
 
-        <section className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+        <section className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">Challenge Overview</h2>
           <div className="mt-4 space-y-4 leading-7 text-gray-700">
             <p>
@@ -151,7 +152,7 @@ const AutodeskFusionAward = () => {
         </section>
 
         <section className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-3xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-6 shadow-sm">
             <h2 className="text-2xl font-bold text-amber-700">Awards</h2>
             <div className="mt-4 space-y-4 text-gray-800">
               <div>
@@ -176,7 +177,7 @@ const AutodeskFusionAward = () => {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm">
+          <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 shadow-sm">
             <h2 className="text-2xl font-bold text-cyan-800">How To Enter</h2>
             <div className="mt-4 space-y-3 leading-7 text-gray-700">
               <p>Each participating team must complete and submit both Generative Design tasks.</p>
@@ -190,14 +191,14 @@ const AutodeskFusionAward = () => {
         </section>
 
         <section className="grid gap-6 md:grid-cols-2">
-          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-700">Task 1</p>
             <h2 className="mt-2 text-2xl font-bold text-slate-900">Lightweight Optimization</h2>
             <p className="mt-4 leading-7 text-gray-700">
               Teams shall select one existing robot component and optimize it using Generative
               Design.
             </p>
-            <p className="mt-3 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
+            <p className="mt-3 rounded-lg bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
               Original Robot Component → GD Study → Optimized Design → Final Submission
             </p>
             <p className="mt-4 leading-7 text-gray-700">
@@ -227,7 +228,7 @@ const AutodeskFusionAward = () => {
             </div>
           </article>
 
-          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-emerald-700">Task 2</p>
             <h2 className="mt-2 text-2xl font-bold text-slate-900">Part Consolidation</h2>
             <p className="mt-4 leading-7 text-gray-700">
@@ -235,7 +236,7 @@ const AutodeskFusionAward = () => {
               single-part solution using Generative Design. The minimum requirement is an
               assembly with three or more original parts consolidated into one.
             </p>
-            <p className="mt-3 rounded-2xl bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
+            <p className="mt-3 rounded-lg bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700">
               Multi-Part Assembly → GD Study → Integrated Design → Final Submission
             </p>
             <p className="mt-4 leading-7 text-gray-700">
@@ -266,10 +267,10 @@ const AutodeskFusionAward = () => {
           </article>
         </section>
 
-        <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <section className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">Submission Requirements</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
-            <div className="rounded-2xl bg-slate-50 p-4">
+            <div className="rounded-lg bg-slate-50 p-4">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Slide 1</p>
               <p className="mt-2 font-semibold text-slate-900">Introduction</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
@@ -279,7 +280,7 @@ const AutodeskFusionAward = () => {
                 <li>Team Photo</li>
               </ul>
             </div>
-            <div className="rounded-2xl bg-slate-50 p-4">
+            <div className="rounded-lg bg-slate-50 p-4">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Slides 2-3</p>
               <p className="mt-2 font-semibold text-slate-900">Task 1: Lightweight Optimization</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
@@ -289,7 +290,7 @@ const AutodeskFusionAward = () => {
                 <li>Design explanation</li>
               </ul>
             </div>
-            <div className="rounded-2xl bg-slate-50 p-4">
+            <div className="rounded-lg bg-slate-50 p-4">
               <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Slides 4-6</p>
               <p className="mt-2 font-semibold text-slate-900">Task 2 and Fusion Links</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700">
@@ -303,24 +304,17 @@ const AutodeskFusionAward = () => {
           </div>
         </section>
 
-        <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <section className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">FAQs</h2>
-          <div className="mt-5 space-y-4">
-            {faqItems.map((item, index) => (
-              <div key={item.question} className="rounded-2xl border border-slate-200 p-4">
-                <p className="font-semibold text-slate-900">
-                  {index + 1}. {item.question}
-                </p>
-                <p className="mt-2 leading-7 text-gray-700">{item.answer}</p>
-              </div>
-            ))}
+          <div className="mt-5">
+            <FAQAccordion items={faqItems} />
           </div>
         </section>
 
-        <section className="rounded-3xl border border-slate-200 bg-white p-6 text-slate-900 shadow-sm">
+        <section className="rounded-lg border border-slate-200 bg-white p-6 text-slate-900 shadow-sm">
           <h2 className="text-2xl font-bold text-slate-900">Fusion Workshop Series</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-5">
               <p className="text-sm uppercase tracking-[0.28em] text-cyan-700">Workshop 1</p>
               <p className="mt-2 text-xl font-semibold text-slate-900">10 June 2026, 4:30 PM to 5:30 PM</p>
               <p className="mt-3 text-slate-700">Competition Launch and Submission Guidelines</p>
@@ -333,7 +327,7 @@ const AutodeskFusionAward = () => {
                 Join video call
               </a>
             </div>
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-5">
               <p className="text-sm uppercase tracking-[0.28em] text-cyan-700">Workshop 2</p>
               <p className="mt-2 text-xl font-semibold text-slate-900">17 June 2026, 4:30 PM to 5:30 PM</p>
               <p className="mt-3 text-slate-700">AI and Generative Design for Robotics Applications</p>

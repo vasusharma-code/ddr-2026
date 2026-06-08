@@ -1,254 +1,163 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/IITD.png';
-import DDRLogo from '../assets/DDLogo-removebg-preview.png';
-import logo2 from '../assets/STPI_Logo_Final_8_4v5[1].png';
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { FaYoutube, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import logo from "../assets/IITD.png";
+import DDRLogo from "../assets/DDLogo-removebg-preview.png";
+import logo2 from "../assets/STPI_Logo_Final_8_4v5[1].png";
+import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
+import { FaChevronDown, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+
+const primaryLinks = [
+  { label: "Home", to: "/" },
+  { label: "Contest Rules", to: "/contest-rules" },
+  { label: "Game Videos", to: "/game-videos" },
+  { label: "Stage-1", to: "/stage1" },
+  { label: "Stage-2", to: "/stage2" },
+  { label: "Final", to: "/final" },
+];
+
+const sponsorLinks = [
+  { label: "Sponsorship", to: "/sponsorship" },
+  { label: "MathWorks Modeling Award", to: "/mathworks" },
+  { label: "Autodesk Fusion Award", to: "/autodesk-fusion-award" },
+];
+
+const socialLinks = [
+  { label: "YouTube", href: "https://youtube.com/@ddnationalrobocon2441?si=v63ugCnYiJLEG3dK", icon: FaYoutube },
+  { label: "Instagram", href: "https://www.instagram.com/ddrobocon?igsh=MXRkMzh6M2I0ZHQ1Ng==", icon: FaInstagram },
+  { label: "Facebook", href: "https://www.facebook.com/share/18nEjBGXC4/", icon: FaFacebook },
+];
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [isVisible, setIsVisible] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [isSponsorDropdownOpen, setSponsorDropdownOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const location = useLocation();
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollPos > currentScrollPos;
-    setIsVisible(visible);
-    setPrevScrollPos(currentScrollPos);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setHasScrolled(window.scrollY > 8);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   useEffect(() => {
-    // Close dropdowns and mobile menu when the route changes
-    setOpenDropdown(null);
-    closeMobileMenu();
+    setSponsorDropdownOpen(false);
+    setMobileMenuOpen(false);
   }, [location]);
 
-  // Sponsor dropdown handlers
-  const handleSponsorClick = (e) => {
-    e.preventDefault();
-    setSponsorDropdownOpen((prev) => !prev);
-  };
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
 
   return (
-    <nav
-      className={`bg-white shadow-md fixed w-full z-10 top-0 transition-all duration-300 ${
-        isVisible ? "opacity-100" : "opacity-0 -translate-y-full"
-      }`}
-      style={{ minHeight: '72px' }} // Ensures minimum height for navbar
-    >
-      <div className="container mx-auto px-2 md:px-4 py-2 flex flex-wrap items-center justify-between min-h-[72px]">
-        <div className="flex items-center min-w-[220px]">
-          <img src={logo} alt="Logo" className="h-12 md:h-16 mr-1" />
-          <h1 className="text-lg md:text-xl font-bold flex items-center whitespace-nowrap">
-            DD Robocon 2026
-            <img src={DDRLogo} alt="DDRLogo" className="h-10 md:h-12 ml-2 md:ml-3" />
-            <img src={logo2} alt="Logo2" className="h-10 md:h-12 ml-2 md:ml-3 mb-2 md:mb-4" />
-          </h1>
-        </div>
-        <div className="flex items-center lg:hidden">
-          <button onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? (
-              <RiCloseLine className="w-6 h-6" />
-            ) : (
-              <RiMenu3Line className="w-6 h-6" />
-            )}
-          </button>
-        </div>
-        {/* Desktop Navigation and Social Icons */}
-        <div className="hidden lg:flex items-center space-x-4 flex-1 justify-end min-w-0">
-          <ul className="flex flex-wrap space-x-2 lg:space-x-4 text-gray-900 items-center">
-            <li><Link to="/" className="nav">Home</Link></li>
-            <li><Link to="/contest-rules" className="nav">Contest Rules</Link></li>
-            <li><Link to="/game-videos" className="nav">Game Videos</Link></li>
-            {/* <li><Link to="/mathworks" className="nav">MathWorks Modeling Award</Link></li> */}
-            {/* <li><Link to="/registration" className="nav">Registration</Link></li> */}
-            <li><Link to="/stage1" className="nav">Stage-1</Link></li>
-            <li><Link to="/stage2" className="nav">Stage-2</Link></li>
-            <li><Link to="/final" className="nav">Final</Link></li>
+    <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${hasScrolled ? "border-slate-200 bg-white/95 shadow-sm backdrop-blur-xl" : "border-slate-100 bg-white/90 backdrop-blur-lg"}`}>
+      <nav className="mx-auto flex min-h-[68px] w-full max-w-[1500px] items-center justify-between gap-5 px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
+        <Link to="/" className="flex min-w-0 shrink-0 items-center gap-3 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600" aria-label="DD Robocon 2026 Home">
+          <div className="flex shrink-0 items-center gap-2">
+            <img src={logo} alt="Logo" className="h-9 w-auto object-contain sm:h-10" />
+            <img src={DDRLogo} alt="DDRLogo" className="h-9 w-auto object-contain sm:h-10" />
+            <img src={logo2} alt="Logo2" className="h-9 w-auto object-contain sm:h-10" />
+          </div>
+          <span className="hidden whitespace-nowrap text-lg font-extrabold leading-none tracking-normal text-slate-900 sm:block xl:text-xl">DD Robocon 2026</span>
+        </Link>
+
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-3 lg:flex">
+          <ul className="flex min-w-0 items-center gap-1 rounded-2xl border border-slate-200 bg-white/90 p-1 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+            {primaryLinks.map((item) => (
+              <li key={item.to}>
+                <NavLink to={item.to} className={({ isActive }) => `inline-flex min-h-10 items-center whitespace-nowrap rounded-xl px-3 text-sm font-bold transition ${isActive ? "bg-blue-600 text-white shadow-sm" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"}`}>
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
             <li className="relative">
-              <span
-                className="nav cursor-pointer select-none"
-                onClick={handleSponsorClick}
-                tabIndex={0}
-                onKeyDown={e => { if (e.key === 'Enter') handleSponsorClick(e); }}
+              <button
+                type="button"
+                className={`inline-flex min-h-10 items-center gap-1 whitespace-nowrap rounded-xl px-3 text-sm font-semibold transition ${sponsorLinks.some((item) => item.to === location.pathname) ? "bg-blue-600 text-white shadow-sm" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"}`}
+                onClick={() => setSponsorDropdownOpen((current) => !current)}
                 aria-haspopup="true"
                 aria-expanded={isSponsorDropdownOpen}
               >
-                Sponsor ▾
-              </span>
-              <ul
-                className={`absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg transition-opacity duration-200 z-20 ${
-                  isSponsorDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                }`}
-                onClick={() => setSponsorDropdownOpen(false)}
-              >
-                <li>
-                  <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100">Sponsorship</Link>
-                </li>
-                <li>
-                  <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100">MathWorks Modeling Award</Link>
-                </li>
-                <li>
-                  <Link to="/autodesk-fusion-award" className="block px-4 py-2 hover:bg-gray-100">Autodesk Fusion Award</Link>
-                </li>
-              </ul>
+                Sponsor <FaChevronDown aria-hidden="true" className="h-3 w-3" />
+              </button>
+              <div className={`absolute right-0 mt-3 w-64 rounded-lg border border-slate-200 bg-white p-2 shadow-xl transition ${isSponsorDropdownOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-1 opacity-0"}`}>
+                {sponsorLinks.map((item) => (
+                  <NavLink key={item.to} to={item.to} className={({ isActive }) => `block rounded-md px-4 py-3 text-sm font-semibold transition ${isActive ? "bg-blue-50 text-blue-700" : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"}`}>
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
             </li>
-            <li><Link to="/contact" className="nav">Contact</Link></li>
             <li>
-              <a 
-                href="https://ddrobocon2025.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="nav"
-              >
+              <NavLink to="/contact" className={({ isActive }) => `inline-flex min-h-10 items-center whitespace-nowrap rounded-xl px-3 text-sm font-semibold transition ${isActive ? "bg-blue-600 text-white shadow-sm" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"}`}>
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <a href="https://ddrobocon2025.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-10 items-center whitespace-nowrap rounded-xl px-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-900">
                 DD-Robocon 2025
               </a>
             </li>
           </ul>
-          <div className="flex space-x-2 lg:space-x-4 ml-2 lg:ml-4">
-            <a href="https://youtube.com/@ddnationalrobocon2441?si=v63ugCnYiJLEG3dK" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="w-6 h-6" />
-            </a>
-            <a href="https://www.instagram.com/ddrobocon?igsh=MXRkMzh6M2I0ZHQ1Ng==" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="w-6 h-6" />
-            </a>
-            <a href="https://www.facebook.com/share/18nEjBGXC4/" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="w-6 h-6" />
-            </a>
-            <a href="https://in.linkedin.com/in/munna-pati-99664217a" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="w-6 h-6" />
-            </a>
-          </div>
-        </div>
-      </div>
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center z-20">
-          <ul className="bg-white bg-opacity-90 w-11/12 max-w-md rounded-lg shadow-lg text-center space-y-4 py-8">
-            <li><Link to="/" className="nav" onClick={closeMobileMenu}>Home</Link></li>
-            {/* <li>
-              <Link to="/important-dates" className="nav" onClick={closeMobileMenu}>Important Dates</Link>
-            </li> */}
-            <li>
-              <Link to="/contest-rules" className="nav" onClick={closeMobileMenu}>Contest Rules</Link>
-            </li>
-            <li>
-              <Link to="/game-videos" className="nav" onClick={closeMobileMenu}>Game Videos</Link>
-            </li>
-            {/* <li>
-              <Link to="/registration" className="nav" onClick={closeMobileMenu}>Registration</Link>
-            </li> */}
-            <li>
-              <Link to="/stage1" className="nav" onClick={closeMobileMenu}>Stage-1</Link>
-            </li>
-            <li>
-              <Link to="/stage2" className="nav" onClick={closeMobileMenu}>Stage-2</Link>
-            </li>
-            <li>
-              <Link to="/final" className="nav" onClick={closeMobileMenu}>Final</Link>
-            </li>
-           
-            <li>
-              <span
-                className="nav cursor-pointer select-none flex items-center justify-center"
-                onClick={handleSponsorClick}
-                tabIndex={0}
-                onKeyDown={e => { if (e.key === 'Enter') handleSponsorClick(e); }}
-                aria-haspopup="true"
-                aria-expanded={isSponsorDropdownOpen}
-              >
-                Sponsor ▾
-              </span>
-              {isSponsorDropdownOpen && (
-                <ul className="ml-4 bg-white bg-opacity-90 rounded shadow-lg text-left space-y-2 py-2">
-                  <li>
-                    <Link to="/sponsorship" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>Sponsorship</Link>
-                  </li>
-                  <li>
-                    <Link to="/mathworks" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>MathWorks Modeling Award</Link>
-                  </li>
-                  <li>
-                    <Link to="/autodesk-fusion-award" className="block px-4 py-2 hover:bg-gray-100" onClick={closeMobileMenu}>Autodesk Fusion Award</Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            {/* <li><Link to="/mathworks" className="nav" onClick={closeMobileMenu}>MathWorks Modeling Award</Link></li> */}
-            <li>
-              <Link to="/contact" className="nav" onClick={closeMobileMenu}>Contact</Link>
-            </li>
-            <li>
-              <a 
-                href="https://ddrobocon2025.vercel.app/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="nav"
-                onClick={closeMobileMenu}
-              >
-                DD-Robocon 2025
+          <div className="flex shrink-0 items-center gap-1">
+            {socialLinks.map(({ label, href, icon: Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-slate-600 transition hover:bg-blue-50 hover:text-blue-700">
+                <Icon aria-hidden="true" className="h-5 w-5" />
               </a>
-            </li>
-          </ul>
-          <div className="flex space-x-4 mt-4">
-            <a href="https://youtube.com/@ddnationalrobocon2441?si=v63ugCnYiJLEG3dK" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="w-6 h-6 text-black" />
-            </a>
-            <a href="https://www.instagram.com/ddrobocon?igsh=MXRkMzh6M2I0ZHQ1Ng==" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="w-6 h-6 text-black" />
-            </a>
-            <a href="https://www.facebook.com/share/18nEjBGXC4/" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="w-6 h-6 text-black" />
-            </a>
-            <a href="https://in.linkedin.com/in/munna-pati-99664217a" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="w-6 h-6 text-black" />
-            </a>
+            ))}
           </div>
         </div>
-      )}
-      <style jsx>{`
-        .nav {
-          display: inline-flex;
-          align-items: center;
-          position: relative;
-          text-decoration: none;
-          color: inherit;
-          transition: all 0.5s;
-        }
-        .nav::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          transform: scaleX(0);
-          height: 2px;
-          bottom: -2px;
-          left: 0;
-          background-color: black;
-          transform-origin: bottom right;
-          transition: transform 0.5s ease-out;
-        }
-        .nav:hover::after {
-          transform: scaleX(1);
-          transform-origin: bottom left;
-        }
-      `}</style>
-    </nav>
+
+        <button
+          type="button"
+          onClick={() => setMobileMenuOpen((current) => !current)}
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:bg-slate-50 lg:hidden"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileMenuOpen}
+        >
+          {isMobileMenuOpen ? <RiCloseLine className="h-6 w-6" /> : <RiMenu3Line className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      <div className={`fixed inset-0 top-[68px] z-40 bg-slate-900/40 backdrop-blur-sm transition lg:hidden ${isMobileMenuOpen ? "visible opacity-100" : "invisible opacity-0"}`} onClick={() => setMobileMenuOpen(false)} />
+      <aside className={`fixed right-0 top-[68px] z-50 h-[calc(100vh-68px)] w-full max-w-sm overflow-y-auto border-l border-slate-200 bg-white p-5 shadow-2xl transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`} aria-label="Mobile navigation">
+        <div className="space-y-1">
+          {primaryLinks.map((item) => (
+            <NavLink key={item.to} to={item.to} className={({ isActive }) => `flex min-h-11 items-center rounded-md px-4 text-base font-semibold transition ${isActive ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200" : "text-slate-700 hover:bg-slate-50"}`}>
+              {item.label}
+            </NavLink>
+          ))}
+          <button type="button" onClick={() => setSponsorDropdownOpen((current) => !current)} className="flex min-h-11 w-full items-center justify-between rounded-md px-4 text-left text-base font-semibold text-slate-700 transition hover:bg-slate-50" aria-expanded={isSponsorDropdownOpen}>
+            Sponsor <FaChevronDown aria-hidden="true" className={`h-3 w-3 transition ${isSponsorDropdownOpen ? "rotate-180" : ""}`} />
+          </button>
+          <div className={`grid transition-all ${isSponsorDropdownOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+            <div className="overflow-hidden pl-3">
+              {sponsorLinks.map((item) => (
+                <NavLink key={item.to} to={item.to} className={({ isActive }) => `mt-1 flex min-h-11 items-center rounded-md px-4 text-sm font-semibold transition ${isActive ? "bg-blue-50 text-blue-700" : "text-slate-600 hover:bg-slate-50"}`}>
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+          <NavLink to="/contact" className={({ isActive }) => `flex min-h-11 items-center rounded-md px-4 text-base font-semibold transition ${isActive ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200" : "text-slate-700 hover:bg-slate-50"}`}>
+            Contact
+          </NavLink>
+          <a href="https://ddrobocon2025.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex min-h-11 items-center rounded-md px-4 text-base font-semibold text-slate-700 transition hover:bg-slate-50">
+            DD-Robocon 2025
+          </a>
+        </div>
+        <div className="mt-8 flex items-center gap-2 border-t border-slate-200 pt-5">
+          {socialLinks.map(({ label, href, icon: Icon }) => (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-50 text-slate-700 transition hover:bg-blue-50 hover:text-blue-700">
+              <Icon aria-hidden="true" className="h-5 w-5" />
+            </a>
+          ))}
+        </div>
+      </aside>
+    </header>
   );
 };
 
