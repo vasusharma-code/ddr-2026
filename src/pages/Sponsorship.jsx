@@ -180,9 +180,9 @@ const Sponsorship = () => (
     </section>
 
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-green-600 mb-6 uppercase tracking-wide">DD-Robocon 2025 Sponsors</h2>
+      <h2 className="text-2xl font-bold text-green-600 mb-6 uppercase tracking-wide">DD-Robocon 2026 Sponsors</h2>
       <div className="mb-8">
-        <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Gold Sponsors</h3>
+        {/* <h3 className="text-xl font-bold text-yellow-600 mb-4 text-center">Gold Sponsors</h3> */}
         <div className="flex flex-wrap justify-center gap-8 items-center">
           <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <img
@@ -200,14 +200,14 @@ const Sponsorship = () => (
               style={{ height: "120px", width: "240px" }}
             />
           </div>
-          <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          {/* <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
             <img
               src={namtechLogo}
               alt="NAMTECH"
               className="object-contain"
               style={{ height: "120px", width: "240px" }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

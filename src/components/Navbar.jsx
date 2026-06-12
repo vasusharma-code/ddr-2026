@@ -122,8 +122,18 @@ const Navbar = () => {
         </button>
       </nav>
 
-      <div className={`fixed inset-0 top-[68px] z-40 bg-slate-900/40 backdrop-blur-sm transition lg:hidden ${isMobileMenuOpen ? "visible opacity-100" : "invisible opacity-0"}`} onClick={() => setMobileMenuOpen(false)} />
-      <aside className={`fixed right-0 top-[68px] z-50 h-[calc(100vh-68px)] w-full max-w-sm overflow-y-auto border-l border-slate-200 bg-white p-5 shadow-2xl transition-transform duration-300 lg:hidden ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`} aria-label="Mobile navigation">
+      <div
+        className={`fixed inset-0 top-[68px] z-40 bg-slate-900/40 backdrop-blur-sm transition-all duration-300 lg:hidden ${
+          isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+        }`}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+      <div
+        className={`absolute left-0 right-0 top-full z-50 max-h-[calc(100vh-68px)] w-full overflow-y-auto border-b border-slate-200 bg-white p-5 shadow-2xl transition-all duration-300 lg:hidden ${
+          isMobileMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-4 opacity-0 invisible pointer-events-none"
+        }`}
+        aria-label="Mobile navigation"
+      >
         <div className="space-y-1">
           {primaryLinks.map((item) => (
             <NavLink key={item.to} to={item.to} className={({ isActive }) => `flex min-h-11 items-center rounded-md px-4 text-base font-semibold transition ${isActive ? "bg-blue-50 text-blue-700 ring-1 ring-blue-200" : "text-slate-700 hover:bg-slate-50"}`}>
@@ -156,7 +166,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-      </aside>
+      </div>
     </header>
   );
 };
