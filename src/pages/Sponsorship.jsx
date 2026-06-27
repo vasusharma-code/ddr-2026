@@ -5,6 +5,8 @@ import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
 import fsmLogo from "../assets/FSMLogo.png";
 import ihfcLogo from "../assets/IHFCLogo.png";
 import namtechLogo from "../assets/NamtechLogo.png";
+import peersRoboticsLogo from "../assets/PeersRobotics.png";
+import robocoticsSocietyLogo from "../assets/robocoticssociety.png";
 import { Container, PageHero, Section } from "../components/DesignSystem";
 
 const Sponsorship = () => (
@@ -196,6 +198,22 @@ const Sponsorship = () => (
             <img
               src={autodeskLogo}
               alt="Autodesk"
+              className="object-contain"
+              style={{ height: "120px", width: "240px" }}
+            />
+          </div>
+          <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+            <img
+              src={peersRoboticsLogo}
+              alt="Peers Robotics"
+              className="object-contain"
+              style={{ height: "120px", width: "240px" }}
+            />
+          </div>
+          <div className="flex items-center justify-center rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+            <img
+              src={robocoticsSocietyLogo}
+              alt="Robotics Society"
               className="object-contain"
               style={{ height: "120px", width: "240px" }}
             />

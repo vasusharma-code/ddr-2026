@@ -81,7 +81,7 @@ const AutodeskFusionAward = () => {
 
             <div className="rounded-lg border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
               <p className="text-sm uppercase tracking-[0.28em] text-cyan-100">Submission Deadline</p>
-              <p className="mt-3 text-2xl font-bold">24 June 2026</p>
+              <p className="mt-3 text-2xl font-bold">28 June 2026</p>
               <p className="text-sm text-cyan-100">23:00 India Time</p>
               <p className="mt-4 text-sm leading-6 text-slate-100">
                 The submission link will be shared after registration. Please read the
