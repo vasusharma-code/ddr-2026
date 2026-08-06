@@ -114,8 +114,14 @@ export const AnnouncementBanner = ({ children, href, variant = "info", className
     </div>
   );
   if (!href) return body;
+  const isInternalLink = href.startsWith("/") || href.startsWith("#/");
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
+    <a
+      href={href}
+      target={isInternalLink ? undefined : "_blank"}
+      rel={isInternalLink ? undefined : "noopener noreferrer"}
+      className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+    >
       {body}
     </a>
   );

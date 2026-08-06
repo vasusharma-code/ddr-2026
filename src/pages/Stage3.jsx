@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Container, PageHero, Section } from "../components/DesignSystem";
+import Results from "./Results";
 
 const Stage3 = () => (
   <div className="page-surface text-slate-900">
@@ -88,6 +89,7 @@ const Stage3 = () => (
         </Card>
       </Container>
     </Section>
+    <Results />
   </div>
 );
 

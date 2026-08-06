@@ -129,8 +129,8 @@ const Hero = () => {
 
             <div>
               <div className="space-y-4">
-                <AnnouncementBanner href="https://drive.google.com/file/d/1hI60BsF9FzvkiyjQ1KZN8WdP_xXzbYn8/view?usp=sharing" variant="warning">
-                  📢Result of Stage-II Out Now!
+                <AnnouncementBanner href="#/final?section=results" variant="warning">
+                  Final Results Are Out Now!
                 </AnnouncementBanner>
               </div>
 
