@@ -4,7 +4,6 @@ import mathworksLogo from "../assets/MathLogo.png";
 import autodeskLogo from "../assets/autodesk-logo-primary-rgb-white-small.png";
 import fsmLogo from "../assets/FSMLogo.png";
 import ihfcLogo from "../assets/IHFCLogo.png";
-import namtechLogo from "../assets/NamtechLogo.png";
 import peersRoboticsLogo from "../assets/PeersRobotics.png";
 import robocoticsSocietyLogo from "../assets/TRSLogo.png";
 import { Container, PageHero, Section } from "../components/DesignSystem";
